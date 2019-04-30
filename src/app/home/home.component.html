@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="p-4 mb-2 bg-info text-white">
+    <h2 class="mx-auto with-home-title">Materias</h2>
+</div>
+<div>
+    <!--<img src="assets/magia.png" alt="imagen" width="200">-->
+
+    <div class="card" *ngFor="let materia of materias">
+        <h5 class="card-header">{{materia.nombre}}</h5>
+        <div class="card-body">
+          <h5 class="card-title">Ejemplo</h5>
+          <p class="card-text">{{materia.descripcion}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+      
+</div>
