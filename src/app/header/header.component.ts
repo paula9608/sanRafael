@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Imateria } from '../interfaces/materia.interface';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  materias: Imateria[];
+  constructor(protected apiService: ApiService) { }
 
   ngOnInit() {
+    this.apiService.findAllmaterias().subscribe(
+      response => this.materias = response.body,
+      err => console.log(err)
+    );
   }
 
 }

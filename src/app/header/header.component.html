@@ -1,5 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Navbar</a>
+<div class="p-4 mb-2 relleno text-white">
+  <h2 class="titulo home-title">Colegio San Rafael</h2>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark barra">
+  <a class="navbar-brand" href="/home"  style="color:#000000">Inicio</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,29 +10,56 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link " href="/#" style="color:#000000">
+          <span> <img src="assets/starM.png" alt="imagen">Resultados</span><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="/admin" style="color:#000000">
+          <span> <img src="assets/student.png" alt="imagen">Estudiantes</span> </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:#000000">
+          <span> <img src="assets/carpetaPe.png" alt="imagen">Archivos</span></a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000000">
+          <span> <img src="assets/mul.png" alt="imagen">Material Apoyo</span>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+         
+          <a class="dropdown-item" href="#" >Videos</a>
+          <a class="dropdown-item" href="#" >Diapositivas</a>
+          <a class="dropdown-item" href="#" >Imagenes</a>
+          
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000000">
+          <span> <img src="assets/libroPe.png" alt="imagen">Asignaturas</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+         
+          <a class="dropdown-item" href="#" *ngFor="let materia of materias">{{materia.nombre}}</a>
+          
+        </div>
       </li>
+      
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+     
+    <li class="menu nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="assets/notificacion.png" alt="imagen">
+        <!-- Counter - Alerts -->
+        <span class="badge badge-danger badge-counter">1+</span>
+      </a>
+     <!-- Dropdown - Alerts -->
+     <div class=" menu dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#" >
+     <img src="assets/alert.png"/>Alerta De progreso</a>
+     
+   <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Ver todas las alertas</a>
+    </div>
+    </li>
   </div>
 </nav>

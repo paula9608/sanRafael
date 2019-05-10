@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     background-color: #17a2b8;
+    background-image: url('src/assets/fondo.png');
     height: 100vh;
   }
 
