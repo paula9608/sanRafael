@@ -12,24 +12,15 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormsModule }   from '@angular/forms';
 import { AlertsModule } from 'angular-alert-module';
-<<<<<<< HEAD
 import { InicioEstudiantesComponent } from './inicio-estudiantes/inicio-estudiantes.component';
 
 
-=======
-import { FormularioComponent } from './formulario/formulario.component';
->>>>>>> 3a97af57bf095f30279c0533263d04c1e4962c33
 const rutas = [
   {path: 'home' , component: HomeComponent},
   {path:  '', component: LoginComponent},
   {path:  'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
-<<<<<<< HEAD
   {path: 'inicioestudiante', component: InicioEstudiantesComponent}
-=======
-  {path:'admin',component:AdminComponent},
-  {path:'formulario',component:FormularioComponent}
->>>>>>> 3a97af57bf095f30279c0533263d04c1e4962c33
 ];
 
 @NgModule({
@@ -40,11 +31,7 @@ const rutas = [
     AdminComponent,
     LoginComponent,
     RegistroComponent,
-<<<<<<< HEAD
     InicioEstudiantesComponent
-=======
-    FormularioComponent
->>>>>>> 3a97af57bf095f30279c0533263d04c1e4962c33
   ],
   imports: [
     BrowserModule,
