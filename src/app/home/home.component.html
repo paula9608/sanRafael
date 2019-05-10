@@ -1,18 +1,67 @@
-<app-header></app-header>
-<div class="p-4 mb-2 bg-info text-white">
-    <h2 class="mx-auto with-home-title">Materias</h2>
-</div>
-<div>
-    <!--<img src="assets/magia.png" alt="imagen" width="200">-->
 
-    <div class="card" *ngFor="let materia of materias">
-        <h5 class="card-header">{{materia.nombre}}</h5>
-        <div class="card-body">
-          <h5 class="card-title">Ejemplo</h5>
-          <p class="card-text">{{materia.descripcion}}</p>
-          <a href="#" class="btn btn-primary">Crear Taller</a>
+<app-header></app-header>  
+    <h5 class="texto-titulo home-title">Administracción Para Docentes</h5>
+    <div class="card-text container">
+    <div class="card-text row">
+        <div class="col-sm-4">
+          <div class="card">
+                <div class="card-header bg-primary mb-3 text-white">
+                  <span><img src="assets/star.png" alt="imagen">Resultados</span></div>
+            <div class="card-body">
+                <h5 class="card-title">Estadisticas Y Reportes</h5>
+              <p class="card-text">En este apartado podras visualizar los avances de tus estudiantes y el progreso 
+                segun las fechas.</p>
+              <a href="#" class="btn btn-primary .bg-primary mb-3">Ir a resultados</a>
+            </div>
+          </div>
         </div>
-    </div>
-
+        <div class="col-sm-4">
+          <div class="card">
+                <div class="card-header bg-danger mb-3 text-white">
+                  <span><img src="assets/libro.png" alt="imagen"> Asignaturas</span></div>
+            <div class="card-body">
+                <h5 class="card-title">Aisgnaturas</h5>
+              <p class="card-text">En este apartado podras subir archivos, talleres y adicionar preguntas a los juegos de cada asignatura.</p>
+              <a href="#" class="btn btn-primary bg-danger mb-3">Ir a asignaturas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="margen row">
+          <div class="col-sm-4">
+            <div class="card">
+                  <div class="card-header bg-success mb-3 text-white">  <span>
+                      <img src="assets/carp.png" alt="imagen"> Archivos recibidos</span></div>
+              <div class="card-body">
+                <h5 class="card-title">Comentarios Y Preguntas</h5>
+                <p class="card-text">Visualice aqui los comentarios e inquietudes de los estudiantes respecto a talleres.</p>
+                <a href="#" class="btn btn-primary bg-success mb-3">Ir a archivos</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+                  <div class="card-header bg-info mb-3 text-white"><span>
+                      <img src="assets/multimedia.png" alt="imagen">
+                    Material De Apoyo</span></div>
+              <div class="card-body">
+                  <h5 class="card-title">Diapositivas,Videos O Imagenes</h5>
+                <p class="card-text">Ingrese aqui para suministrar material de apoyo de las clases a sus estudiantes.</p>
+                <a href="#" class="btn btn-primary bg-info mb-3">Ir a material</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="card">
+                    <div class="card-header colores-card mb-3 text-white">
+                      <span> <img src="assets/estudiante.png" alt="imagen">Estudiantes</span></div>
+                <div class="card-body">
+                    <h5 class="card-title">Administre información</h5>
+                  <p class="card-text">Administre la información de sus estudiantes, agreguelos a la lista y modifique datos personales.</p>
+                  <a href="#" class="btn btn-primary colores-card mb-3">Ir a estudiantes</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
       
-</div>

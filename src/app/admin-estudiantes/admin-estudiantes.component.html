@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="p-4 mb-2" style="color:#000000">
+  <h5 class="home-title">Listado De Estudiantes</h5>
+</div>
+<div class="alinear input-group mb-2">
+  <input type="text" class="form-control" placeholder="Ingrese codigo o nombre" aria-label="Recipient's username"
+    aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary bg-primary text-white" type="button" id="button-addon2">
+      <span><img src="assets/lupita.png"> Buscar</span></button>
+    <div>
+      <button type="button" class="espaciado btn btn-outline-secondary bg-success text-white" data-toggle="modal"
+        data-target="#bookmarkModal">
+        <span> <img src="assets/sum.png"> Nuevo</span>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <table class="tabla table table-bordered table-hover">
+    <thead class="bg-info text-white">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre y apellido</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Grado</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Paula Rojas</td>
+        <td>cra14#29-62</td>
+        <td>5</td>
+        <td>314668</td>
+        <td>
+
+          <button class="boton btn btn-outline-secondary  text-white" type="button" id="Eliminar" img src="assets/eliminar.png">
+            <span><img src="assets/eliminar.png"> Eliminar</span></button>
+       </td>
+      </tr>  
+    </tbody>
+  </table>
+</div>
+<!-- Bookmark form -->
+<app-formulario></app-formulario>

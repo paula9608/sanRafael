@@ -1,0 +1,19 @@
+.alinear{
+  
+    justify-content:left;
+     margin-left:20px;
+    margin-right: auto;
+    width: 400px;
+}
+.espaciado{
+    margin-left:10px;
+}
+.tabla {
+    border-right:20px solid #ffffff;
+    border-left: 20px solid #ffffff;
+     padding: 12px;
+    margin-top: 40px;
+  }
+  .boton{
+    background: #5e5d5dd0;
+  }

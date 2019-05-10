@@ -1,0 +1,32 @@
+.card-text{
+    justify-content:left;
+    margin-left: 12px;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.texto-titulo{
+   
+    margin-top: 30px;
+    font-size: 130%;
+    justify-content:left;
+     margin-left: 53px;
+    margin-right: auto;
+}
+.margen{
+    justify-content:left;
+    margin-left: 12px;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 18px;
+}
+.colores-card{
+    background-color:#800080;
+}
+
+.titulo{
+  
+    font-size: 140%;
+    justify-content:left;
+     margin-left:550px;
+    margin-right: auto;
+}

@@ -7,18 +7,19 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { DirectivaComponent } from './directiva/directiva.component';
+import { AdminComponent } from './admin-estudiantes/admin-estudiantes.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormsModule }   from '@angular/forms';
 import { AlertsModule } from 'angular-alert-module';
-
-
+import { FormularioComponent } from './formulario/formulario.component';
 const rutas = [
   {path: 'home' , component: HomeComponent},
   {path:  '', component: LoginComponent},
   {path:  'login', component: LoginComponent},
-  {path: 'registro', component: RegistroComponent}
+  {path: 'registro', component: RegistroComponent},
+  {path:'admin',component:AdminComponent},
+  {path:'formulario',component:FormularioComponent}
 ];
 
 @NgModule({
@@ -26,9 +27,10 @@ const rutas = [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    DirectivaComponent,
+    AdminComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
