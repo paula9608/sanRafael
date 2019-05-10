@@ -12,13 +12,15 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormsModule }   from '@angular/forms';
 import { AlertsModule } from 'angular-alert-module';
+import { InicioEstudiantesComponent } from './inicio-estudiantes/inicio-estudiantes.component';
 
 
 const rutas = [
   {path: 'home' , component: HomeComponent},
   {path:  '', component: LoginComponent},
   {path:  'login', component: LoginComponent},
-  {path: 'registro', component: RegistroComponent}
+  {path: 'registro', component: RegistroComponent},
+  {path: 'inicioestudiante', component: InicioEstudiantesComponent}
 ];
 
 @NgModule({
@@ -28,7 +30,8 @@ const rutas = [
     HomeComponent,
     DirectivaComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    InicioEstudiantesComponent
   ],
   imports: [
     BrowserModule,
