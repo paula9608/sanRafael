@@ -1,0 +1,23 @@
+*{
+  margin: 0px;
+  padding: 3px;  
+}
+
+div#nav-row{
+  margin-top: 60px;
+  }
+
+div#target-row{
+  margin-left: auto;
+  margin-right: auto;
+}
+div#navbarsExampleDefault{
+  margin-left: 500px;
+  text-align: center;
+}
+div#card-uno{
+  text-align: center;
+}
+div#target-col-uno{
+  text-align: center;
+}
