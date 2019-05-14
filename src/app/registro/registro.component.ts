@@ -4,6 +4,7 @@ import { AlertsService } from 'angular-alert-module';
 import Swal from 'sweetalert2'
 import { ApiService } from '../services/api.service';
 import { RouterModule, Router } from '@angular/router';
+import { TipoRolEnum } from '../interfaces/rol.interface';
 
 @Component({
   selector: 'app-registro',
@@ -24,7 +25,7 @@ export class RegistroComponent implements OnInit {
 
   registrarUsuario() {
     if(this.validarContrasena()) {
-      this.apiService.registrarusuario(this.usuario).subscribe(
+      this.apiService.registrarusuario(this.usuario, TipoRolEnum.ROLE_PROFESOR).subscribe(
         res => this.router.navigateByUrl('/login'),
         err => console.log(err))
     }

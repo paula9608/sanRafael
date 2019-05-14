@@ -11,7 +11,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputName">Nombre</label>
-                      <input type="username" class="form-control" id="inputName" placeholder="Nombre">
+                      <input  type="text" name="nombre" id="nombre"  placeholder="Nombre">
                     </div>
                     <div class="form-group col-md-6">
                     <label for="inputLastname">Apellido</label>
@@ -63,7 +63,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="submit" name="submit" class="btn btn-info btn-md" value="Registrar" (click)="registrarUsuario()">Guardar</button>
         </div>
       </div>
     </div>

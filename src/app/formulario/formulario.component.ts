@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IUsuario } from '../interfaces/usuario.interface';
+import { Router } from '@angular/router';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-formulario',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
-
-  constructor() { }
+  usuario = {} as IUsuario;
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit() {
   }
-
+  registrarUsuario() {
+   
+  }
 }

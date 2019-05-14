@@ -13,13 +13,15 @@ import { RegistroComponent } from './registro/registro.component';
 import { FormsModule }   from '@angular/forms';
 import { AlertsModule } from 'angular-alert-module';
 import { FormularioComponent } from './formulario/formulario.component';
+import { HomeEstudianteComponent } from './home-estudiante/home-estudiante.component';
 const rutas = [
+  {path: '', component: LoginComponent},
   {path: 'home' , component: HomeComponent},
-  {path:  '', component: LoginComponent},
-  {path:  'login', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
-  {path:'admin',component:AdminComponent},
-  {path:'formulario',component:FormularioComponent}
+  {path: 'admin',component:AdminComponent},
+  {path: 'formulario',component:FormularioComponent},
+  {path: 'home-estudiante', component: HomeEstudianteComponent}
 ];
 
 @NgModule({
@@ -30,7 +32,8 @@ const rutas = [
     AdminComponent,
     LoginComponent,
     RegistroComponent,
-    FormularioComponent
+    FormularioComponent,
+    HomeEstudianteComponent
   ],
   imports: [
     BrowserModule,
