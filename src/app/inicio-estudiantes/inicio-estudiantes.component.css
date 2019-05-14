@@ -1,0 +1,42 @@
+*{
+  margin: 0px;
+  padding: 3px;  
+}
+
+div#nav-row{
+  margin-top: 60px;
+  }
+
+div#target-row{
+align-content: center;
+  
+}
+div#navbarsExampleDefault{
+  margin-left: 500px;
+  text-align: center;
+}
+div#target-col-tres{
+  text-align: center;
+  
+}
+div#target-col-dos{
+  text-align: center;
+}
+div#nombre{
+  text-align: right;
+}
+
+div#target-col-uno{
+  text-align: center;
+  margin-left: 100px;
+}
+div#nav-otra{
+  background-image:url('src/assets/alfombraazul.gif');
+}
+.div-principalIni {
+  margin: 0;
+  padding: 0;
+  background-image: url('src/assets/fondo2.jpg');
+  background-color: #17a2b8;
+  height: 100vh;
+}

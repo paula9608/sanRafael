@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,16 +11,32 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormsModule }   from '@angular/forms';
 import { AlertsModule } from 'angular-alert-module';
-import { FormularioComponent } from './formulario/formulario.component';
+
+
 import { HomeEstudianteComponent } from './home-estudiante/home-estudiante.component';
+
+import { InicioEstudiantesComponent } from './inicio-estudiantes/inicio-estudiantes.component';
+import { FormularioComponent } from  './formulario/formulario.component';
+
+
+
+
 const rutas = [
   {path: '', component: LoginComponent},
   {path: 'home' , component: HomeComponent},
+
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'admin',component:AdminComponent},
   {path: 'formulario',component:FormularioComponent},
-  {path: 'home-estudiante', component: HomeEstudianteComponent}
+  {path: 'home-estudiante', component: HomeEstudianteComponent},
+  {path:  ' ', component: LoginComponent},
+  {path:  'login', component: LoginComponent},
+  {path: 'registro', component: RegistroComponent},
+  {path: 'admin',component: AdminComponent},
+  {path: ' formulario ' , component: FormularioComponent },
+  {path: 'inicioestudiante', component: InicioEstudiantesComponent}
+
 ];
 
 @NgModule({
@@ -33,7 +48,10 @@ const rutas = [
     LoginComponent,
     RegistroComponent,
     FormularioComponent,
-    HomeEstudianteComponent
+    HomeEstudianteComponent,
+  
+    InicioEstudiantesComponent
+
   ],
   imports: [
     BrowserModule,
