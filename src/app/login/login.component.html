@@ -9,18 +9,17 @@
                         <h3 class="text-center text-dark">Iniciar sesión en SanRafael-App</h3>
                        
                         <div class="form-group">
-                            <label for="username" class="text-info">Username:</label><br>
+                            <label for="username" class="text-info">Nombre de usuario:</label><br>
                             <input type="text" name="username" id="username" class="form-control" [(ngModel)]="username">
                         </div>
                         <div class="form-group">
-                            <label for="password" class="text-info">Password:</label><br>
+                            <label for="password" class="text-info">Contraseña:</label><br>
                             <input type="password" name="password"  id="password" class="form-control" [(ngModel)]="password">
                         </div>
                         <div class="form-group">
                             <label for="remember-me" class="text-info"><span>Recordarme</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
                             <input type="button" name="submit" class="btn btn-info btn-md" value="Iniciar sesion" (click)="login()">
-                            <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                            <input type="button" name="submit" class="btn btn-info btn-md" value="Enviar" onclick="location='/inicioestudiante'" >
+                            
                            
                         </div>
                         <div id="register-link" class="text-right">

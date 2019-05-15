@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUsuario } from '../interfaces/usuario.interface';
 
 @Component({
   selector: 'app-inicio-estudiantes',

@@ -17,6 +17,7 @@ import { HomeEstudianteComponent } from './home-estudiante/home-estudiante.compo
 
 import { InicioEstudiantesComponent } from './inicio-estudiantes/inicio-estudiantes.component';
 import { FormularioComponent } from  './formulario/formulario.component';
+import { VistaActividadesComponent } from './vista-actividades/vista-actividades.component';
 
 
 
@@ -24,7 +25,7 @@ import { FormularioComponent } from  './formulario/formulario.component';
 const rutas = [
   {path: '', component: LoginComponent},
   {path: 'home' , component: HomeComponent},
-
+  {path: 'vistaActividad', component: VistaActividadesComponent},
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'admin',component:AdminComponent},
@@ -49,8 +50,8 @@ const rutas = [
     RegistroComponent,
     FormularioComponent,
     HomeEstudianteComponent,
-  
-    InicioEstudiantesComponent
+    InicioEstudiantesComponent,
+    VistaActividadesComponent
 
   ],
   imports: [

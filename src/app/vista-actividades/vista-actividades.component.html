@@ -1,0 +1,32 @@
+<div id="Actividad" class="divClaseActividad">
+  <div class="container">
+    <div id="nav-row" class="row">
+      <nav id="nav-otra" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <div id="titulo" class="col-sm">
+            <h1 style="color:#FFFFFF">Colegio San Rafael</h1>
+          </div>
+          <div class="col-sm">
+            <div id="cerrar" class="text-right">
+              <a [routerLink]="['/login']" class="text-info">Cerrar sesión</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="infoEstudiante" class="row">
+      <div class="col-sm">
+        <h2 style="color:#FFFFFF">Nombre del estudiante</h2>
+      </div>
+      <div class="col-sm">
+        <h2 style="color:#FFFFFF" id="nombre">Grado del estudiante</h2>
+      </div>
+    </div>
+  </div>
+
+</div>
