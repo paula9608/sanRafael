@@ -10,14 +10,19 @@
           <div id="titulo" class="col-sm">
             <h1 style="color:#FFFFFF">Colegio San Rafael</h1>
           </div>
-          <div id="columna0" class="col-sm">
-            <div id="cerrar" class="text-right">
-              <a [routerLink]="['/login']" class="text-info">Cerrar sesión</a>
+          <div class="col col-lg-2">
+              <div class="row">
+                  <div id="columna0" class="col">
+                      <div id="cerrar" class="text-right">
+                        <a [routerLink]="['/login']" class="text-info">Cerrar sesión</a>
+                      </div>
+                    </div>
+                    <div id="columna1" class="col-sm">
+                      <input id="volver" type=image src="assets/home.png" width="40" height="40"
+                        onclick="location.href='/inicioestudiante'">
+                    </div> </div>
+                
             </div>
-          </div>
-          <div id="columna1" class="col-sm">
-              <input id="volver" type=image src="assets/home.png" width="40" height="40" onclick="location.href='/inicioestudiante'">
-          </div>
         </div>
       </nav>
     </div>
@@ -26,8 +31,8 @@
       <div class="col-sm">
         <h2 style="color:#FFFFFF">Nombre del estudiante</h2>
       </div>
-      <div class="col-sm">
-        <h2 style="color:#FFFFFF" id="nombre">Grado del estudiante</h2>
+      <div class="col col-lg-2">
+        <h2 style="color:#FFFFFF" id="nombre">Grado</h2>
       </div>
     </div>
     <div id="tabla" class="row">
@@ -37,22 +42,22 @@
               <li class="media">
                 <img src="assets/flecha.png" class="mr-3" >
                 <div class="media-body">
-                  <h5 class="mt-0 mb-1">Actividad 1</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                  <h5 class="mt-0 mb-1">Crucigrama numérico</h5>
+                  Escribe en el crucigrama los resultados de las operaciones propuestas
                 </div>
               </li>
               <li class="media my-4">
                 <img src="assets/flecha.png" class="mr-3">
                 <div class="media-body">
-                  <h5 class="mt-0 mb-1">Actividad 2</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                  <h5 class="mt-0 mb-1">Taller tipo Icfes</h5>
+                  Debes seleccionar la respuesta correcta según el texto leído.
                 </div>
               </li>
               <li class="media">
                 <img src="assets/flecha.png" class="mr-3" >
                 <div class="media-body">
-                  <h5 class="mt-0 mb-1">Actividad 3</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                  <h5 class="mt-0 mb-1">Relacionar</h5>
+                  Relaciona cada uno de los colores con la fruta adecuada.
                 </div>
               </li>
             </ul>

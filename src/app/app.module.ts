@@ -11,13 +11,12 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormsModule }   from '@angular/forms';
 import { AlertsModule } from 'angular-alert-module';
-
-
 import { HomeEstudianteComponent } from './home-estudiante/home-estudiante.component';
-
 import { InicioEstudiantesComponent } from './inicio-estudiantes/inicio-estudiantes.component';
 import { FormularioComponent } from  './formulario/formulario.component';
 import { VistaActividadesComponent } from './vista-actividades/vista-actividades.component';
+import { VistaDocumentosComponent } from './vista-documentos/vista-documentos.component';
+import { VistaCosaInteresComponent } from './vista-cosa-interes/vista-cosa-interes.component';
 
 
 
@@ -36,8 +35,8 @@ const rutas = [
   {path: 'registro', component: RegistroComponent},
   {path: 'admin',component: AdminComponent},
   {path: ' formulario ' , component: FormularioComponent },
-  {path: 'inicioestudiante', component: InicioEstudiantesComponent}
-
+  {path: 'inicioestudiante', component: InicioEstudiantesComponent},
+  {path: 'vistaDocumentos', component: VistaDocumentosComponent}
 ];
 
 @NgModule({
@@ -51,7 +50,9 @@ const rutas = [
     FormularioComponent,
     HomeEstudianteComponent,
     InicioEstudiantesComponent,
-    VistaActividadesComponent
+    VistaActividadesComponent,
+    VistaDocumentosComponent,
+    VistaCosaInteresComponent
 
   ],
   imports: [
