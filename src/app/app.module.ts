@@ -36,7 +36,8 @@ const rutas = [
   {path: 'admin',component: AdminComponent},
   {path: ' formulario ' , component: FormularioComponent },
   {path: 'inicioestudiante', component: InicioEstudiantesComponent},
-  {path: 'vistaDocumentos', component: VistaDocumentosComponent}
+  {path: 'vistaDocumentos', component: VistaDocumentosComponent},
+  {path: 'vistaCosasInte', component: VistaCosaInteresComponent}
 ];
 
 @NgModule({

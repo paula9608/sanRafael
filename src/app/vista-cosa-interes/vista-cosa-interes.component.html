@@ -1,4 +1,4 @@
-<div id="actividad" class="divClassDocumentos">
+<div id="cosas" class="divClassCosas">
   <div class="container-nav">
     <div id="nav1-row" class="row">
       <nav id="nav-otra" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -10,14 +10,19 @@
           <div id="titulo" class="col-sm">
             <h1 style="color:#FFFFFF">Colegio San Rafael</h1>
           </div>
-          <div id="columna0" class="col-sm">
-            <div id="cerrar" class="text-right">
-              <a [routerLink]="['/login']" class="text-info">Cerrar sesión</a>
+          <div class="col col-lg-2">
+              <div class="row">
+                  <div id="columna0" class="col">
+                      <div id="cerrar" class="text-right">
+                        <a [routerLink]="['/login']" class="text-info">Cerrar sesión</a>
+                      </div>
+                    </div>
+                    <div id="columna1" class="col-sm">
+                      <input id="volver" type=image src="assets/home.png" width="40" height="40"
+                        onclick="location.href='/inicioestudiante'">
+                    </div> </div>
+                
             </div>
-          </div>
-          <div id="columna1" class="col-sm">
-              <input id="volver" type=image src="assets/home.png" width="40" height="40" onclick="location.href='/inicioestudiante'">
-          </div>
         </div>
       </nav>
     </div>
@@ -26,50 +31,32 @@
       <div class="col-sm">
         <h2 style="color:#FFFFFF">Nombre del estudiante</h2>
       </div>
+      <div class="col col-lg-2">
+        <h2 style="color:#FFFFFF" id="nombre">Grado</h2>
+      </div>
+    </div>
+    <h2 style="color:#FFFFFF">Imágenes y videos</h2>
+    <div class="row">
       <div class="col-sm">
-        <h2 style="color:#FFFFFF" id="nombre">Grado del estudiante</h2>
+          <img src="assets/ninos4.png" class="img-fluid" alt="Responsive image">
+
+      </div>
+      <div class="col-sm">
+          <img src="assets/ninos3.png" class="img-fluid" alt="Responsive image">
+
       </div>
     </div>
     <div class="row">
-      <div class="col-sm">
-        <div id="tarjetaVideos" class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
+        <div class="col-sm">
+            <img src="assets/ninos2.jpg" class="img-fluid" alt="Responsive image">
+  
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <div id="tarjetaImagenes" class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
+        <div class="col-sm">
+            <img src="assets/ninos1.jpg" class="img-fluid" alt="Responsive image">
+  
         </div>
+        <embed src="assets/video.mp4" type="" width="400" height="400">
       </div>
-    </div>
     
   </div>
 
