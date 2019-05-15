@@ -11,10 +11,7 @@ div#target-row{
 align-content: center;
   
 }
-div#navbarsExampleDefault{
-  margin-left: 500px;
-  text-align: center;
-}
+
 div#target-col-tres{
   text-align: center;
   
@@ -30,9 +27,7 @@ div#target-col-uno{
   text-align: center;
   margin-left: 100px;
 }
-div#nav-otra{
-  background-image:url('src/assets/alfombraazul.gif');
-}
+
 .div-principalIni {
   margin: 0;
   padding: 0;

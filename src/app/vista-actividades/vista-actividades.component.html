@@ -1,24 +1,27 @@
-<div id="Actividad" class="divClaseActividad">
-  <div class="container">
-    <div id="nav-row" class="row">
+<div id="actividad" class="divClaseActividad">
+  <div class="container-nav">
+    <div id="nav1-row" class="row">
       <nav id="nav-otra" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
           aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse" id="barra">
           <div id="titulo" class="col-sm">
             <h1 style="color:#FFFFFF">Colegio San Rafael</h1>
           </div>
-          <div class="col-sm">
+          <div id="columna0" class="col-sm">
             <div id="cerrar" class="text-right">
               <a [routerLink]="['/login']" class="text-info">Cerrar sesión</a>
             </div>
           </div>
+          <div id="columna1" class="col-sm">
+              <input id="volver" type=image src="assets/home.png" width="40" height="40" onclick="location.href='/inicioestudiante'">
+          </div>
         </div>
       </nav>
     </div>
+
     <div id="infoEstudiante" class="row">
       <div class="col-sm">
         <h2 style="color:#FFFFFF">Nombre del estudiante</h2>
@@ -27,6 +30,35 @@
         <h2 style="color:#FFFFFF" id="nombre">Grado del estudiante</h2>
       </div>
     </div>
+    <div id="tabla" class="row">
+      <div class="col-sm">
+        <div id="lista" class="container">
+          <ul class="list-unstyled">
+              <li class="media">
+                <img src="assets/flecha.png" class="mr-3" >
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Actividad 1</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+              <li class="media my-4">
+                <img src="assets/flecha.png" class="mr-3">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Actividad 2</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+              <li class="media">
+                <img src="assets/flecha.png" class="mr-3" >
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Actividad 3</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+            </ul>
+          </div>
+    </div>
+  </div>
   </div>
 
 </div>
