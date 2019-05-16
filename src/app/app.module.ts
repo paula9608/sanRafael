@@ -9,38 +9,41 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin-estudiantes/admin-estudiantes.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AlertsModule } from 'angular-alert-module';
 import { HomeEstudianteComponent } from './home-estudiante/home-estudiante.component';
 import { InicioEstudiantesComponent } from './inicio-estudiantes/inicio-estudiantes.component';
-import { FormularioComponent } from  './formulario/formulario.component';
+import { FormularioComponent } from './formulario/formulario.component';
 import { VistaActividadesComponent } from './vista-actividades/vista-actividades.component';
 import { VistaDocumentosComponent } from './vista-documentos/vista-documentos.component';
 import { VistaCosaInteresComponent } from './vista-cosa-interes/vista-cosa-interes.component';
+import { VistaMinijuegosComponent } from './vista-minijuegos/vista-minijuegos.component';
+import { JuegosComponent } from './juegos/juegos.component';
 
 
 
 
-const rutas = [
-  {path: '', component: LoginComponent},
-  {path: 'home' , component: HomeComponent},
-  {path: 'vistaActividad', component: VistaActividadesComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'registro', component: RegistroComponent},
-  {path: 'admin',component:AdminComponent},
-  {path: 'formulario',component:FormularioComponent},
-  {path: 'home-estudiante', component: HomeEstudianteComponent},
-  {path:  ' ', component: LoginComponent},
-  {path:  'login', component: LoginComponent},
-  {path: 'registro', component: RegistroComponent},
-  {path: 'admin',component: AdminComponent},
-  {path: ' formulario ' , component: FormularioComponent },
-  {path: 'inicioestudiante', component: InicioEstudiantesComponent},
-  {path: 'vistaDocumentos', component: VistaDocumentosComponent},
-  {path: 'vistaCosasInte', component: VistaCosaInteresComponent}
-];
+
+const rutas = [ 
+  { path: '', component: LoginComponent}, 
+  { path: 'home' , component: HomeComponent}, 
+  { path: 'vistaActividad', component: VistaActividadesComponent},
+  { path: 'login', component: LoginComponent}, 
+  { path: 'registro', component: RegistroComponent},
+  { path: 'admin',component:AdminComponent}, 
+  { path: 'formulario',component:FormularioComponent}, 
+  { path: 'home-estudiante', component: HomeEstudianteComponent},
+  { path: ' ', component: LoginComponent}, 
+  { path: 'inicioestudiante', component: InicioEstudiantesComponent},
+  { path: 'vistaDocumentos', component: VistaDocumentosComponent },
+  { path: 'vistaCosasInte', component: VistaCosaInteresComponent},
+  {path: 'vistaJuegos', component:VistaMinijuegosComponent},
+  {path: 'juegos',component: JuegosComponent}  
+] ;  
+
+
 @NgModule({
-  declarations: [
+      declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
@@ -52,7 +55,9 @@ const rutas = [
     InicioEstudiantesComponent,
     VistaActividadesComponent,
     VistaDocumentosComponent,
-    VistaCosaInteresComponent
+    VistaCosaInteresComponent,
+    VistaMinijuegosComponent,
+    JuegosComponent
 
   ],
   imports: [
