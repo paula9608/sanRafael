@@ -1,0 +1,97 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark barra">
+    <a class="navbar-brand" href="/home"  style="color:#000000">Inicio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link " href="/#" style="color:#000000">
+            <span> <img src="assets/starM.png" alt="imagen">Resultados</span><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin" style="color:#000000">
+            <span> <img src="assets/student.png" alt="imagen">Estudiantes</span> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:#000000">
+            <span> <img src="assets/carpetaPe.png" alt="imagen">Archivos</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000000">
+            <span> <img src="assets/mul.png" alt="imagen">Material Apoyo</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+           
+            <a class="dropdown-item" href="#" >Videos</a>
+            <a class="dropdown-item" href="#" >Diapositivas</a>
+            <a class="dropdown-item" href="#" >Imagenes</a>
+            
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000000">
+            <span> <img src="assets/libroPe.png" alt="imagen">Asignaturas</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+           
+            <a class="dropdown-item" href="#" *ngFor="let materia of materias">{{materia.nombre}}</a>
+            
+          </div>
+        </li>
+        
+      </ul>
+       
+      <li class="menu nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="assets/notificacion.png" alt="imagen">
+          <!-- Counter - Alerts -->
+          <span class="badge badge-danger badge-counter">1+</span>
+        </a>
+       <!-- Dropdown - Alerts -->
+       <div class=" menu dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#" >
+       <img src="assets/alert.png"/>Alerta De progreso</a>
+       
+     <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Ver todas las alertas</a>
+      </div>
+      </li>
+    </div>
+  </nav>
+  
+  <div class ="divi">
+<div class="container container-fondo">
+  <img src="http://gifgifs.com/animations/jobs-people/teachers/Professor_3.gif">
+¿Tienes nuevo material?
+ <!-- Dropdown - Alerts 
+<div class="vertical-menu">
+    <a  class="active">Lectura</a>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+    <a  class="active">matematica</a>
+  </div>  -->
+</div>
+<div class="list-group alinear-contenedor">
+    <a href="#" class="list-group-item list-group-item-action active cabecera-fondo bg-info">
+      Talleres Y Preguntas Para juegos
+    </a>
+    <a href="#" class="list-group-item list-group-item-action"><span><h5>Taller</h5> 
+      <img src="assets/calculadora.png"> <button class="btn btn-outline-secondary bg-info text-white alinear-icono" type="button" id="elim">
+          <img src="assets/basura.png" width="17"> </button> <button class="btn btn-outline-secondary bg-info text-white alinear-otro" type="button" id="preg">
+              <img src="assets/pregunta.png" width="18"> </button> 
+      <p>  Descripcion: Este es un taller para reforzar las operaciones aritmeticas.<br/>
+    Materia: Matematicas<br/>grupo:5</p>
+      </span>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action " >
+        <button class="btn btn-outline-secondary bg-success text-white alinear-boton" type="button" id="pregunta">
+            <span><img src="assets/sum.png"> Taller</span></button>
+    </a>
+
+</div>
+</div>

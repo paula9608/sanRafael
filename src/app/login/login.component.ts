@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
     if (rol === TipoRolEnum.ROLE_PROFESOR) {
       this.router.navigateByUrl('/home');
     } else {
-      this.router.navigateByUrl('/home-estudiante');
+      this.router.navigateByUrl('/inicioestudiante');
     }
   }
 }

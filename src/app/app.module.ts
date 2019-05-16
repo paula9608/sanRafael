@@ -17,6 +17,8 @@ import { HomeEstudianteComponent } from './home-estudiante/home-estudiante.compo
 
 import { InicioEstudiantesComponent } from './inicio-estudiantes/inicio-estudiantes.component';
 import { FormularioComponent } from  './formulario/formulario.component';
+import { ActividadProfesorComponent } from './actividad-profesor/actividad-profesor.component';
+import { FormularioEditarComponent } from './formulario-editar/formulario-editar.component';
 
 
 
@@ -24,7 +26,7 @@ import { FormularioComponent } from  './formulario/formulario.component';
 const rutas = [
   {path: '', component: LoginComponent},
   {path: 'home' , component: HomeComponent},
-
+  {path:'actividad-profesor',component: ActividadProfesorComponent},
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'admin',component:AdminComponent},
@@ -34,7 +36,7 @@ const rutas = [
   {path:  'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'admin',component: AdminComponent},
-  {path: ' formulario ' , component: FormularioComponent },
+  {path: ' app-formulario-editar ' , component: FormularioEditarComponent },
   {path: 'inicioestudiante', component: InicioEstudiantesComponent}
 
 ];
@@ -50,7 +52,10 @@ const rutas = [
     FormularioComponent,
     HomeEstudianteComponent,
   
-    InicioEstudiantesComponent
+    InicioEstudiantesComponent,
+  
+    ActividadProfesorComponent,
+    FormularioEditarComponent
 
   ],
   imports: [

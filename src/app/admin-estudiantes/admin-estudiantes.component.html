@@ -28,17 +28,17 @@
         <th scope="col">Accion</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Paula Rojas</td>
-        <td>cra14#29-62</td>
-        <td>5</td>
-        <td>314668</td>
+    <tbody >
+      <tr *ngFor="let usuario of usuarios" >
+          
+        <th scope="row" >{{usuario.id}}</th>
+        <td>{{usuario.nombre}} {{usuario.apellido}}</td>
+        <td>{{usuario.direccion}}</td>
+        <td>{{usuario.grado}}</td>
+        <td>{{usuario.telefono}}</td>
         <td>
-
-          <button class="boton btn btn-outline-secondary  text-white" type="button" id="Eliminar" img src="assets/eliminar.png">
-            <span><img src="assets/eliminar.png"> Eliminar</span></button>
+            <input type="button" name="submit" class="btn btn-info btn-md" value="eliminar" (click)="eliminarUsuario(usuario.id,usuario.rol.tipo)">
+          
        </td>
       </tr>  
     </tbody>
