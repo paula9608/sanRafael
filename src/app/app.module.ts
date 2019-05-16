@@ -39,7 +39,6 @@ const rutas = [
   {path: 'vistaDocumentos', component: VistaDocumentosComponent},
   {path: 'vistaCosasInte', component: VistaCosaInteresComponent}
 ];
-
 @NgModule({
   declarations: [
     AppComponent,
