@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 3px;  
+  }
+  .divClassDocumentos {
+      margin: 0;
+      padding: 0;
+      background-image: url('src/assets/fondo.png');
+      background-color: #17a2b8;
+      height: 200vh;
+    }
+    div#nav1-row{
+      margin-top: 60px;
+      }
+    div#tarjetaMatematicas{
+      text-align: center;
+      margin-left: 300px;
+    }  
+    div#tarjetaLecto{
+      text-align: center;
+      margin-left: 300px;
+    } 
+    h2#grado{
+      
+      margin-left: 1000px;
+    }

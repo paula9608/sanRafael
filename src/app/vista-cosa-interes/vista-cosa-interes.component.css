@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 3px;  
+  }
+  .divClassCosas {
+      margin: 0;
+      padding: 0;
+      background-image: url('src/assets/fondo.png');
+      background-color: #17a2b8;
+      height: 200vh;
+    
+    }
+    div#nav1-row{
+      margin-top: 60px;
+      }
+    
