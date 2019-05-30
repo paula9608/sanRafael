@@ -1,0 +1,96 @@
+<div id="nav-row" class="row">
+  <nav id="nav" class="navbar navbar-expand-md navbar-dark divi fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <div class="col-sm">
+        <div id="cerrar" class="text-left">
+          <a [routerLink]="['/actividad-profesor']" style="color:#FFFFFF">cerrar</a>
+        </div>
+      </div>
+      <div id="titulo" class="col-sm fondo">
+        <h3 style="color:#FFFFFF">Pregunta</h3>
+      </div>
+      <div class="col-sm">
+        <div id="next" class="text-sucess margen">
+          <a href="/admin" class="btn btn-info  mb-3 bg-success">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<div id=”div1″ class="cajon1">
+  <form>
+    <div class="form-group">
+      <label>Pregunta</label>
+      <input type="text" class="form-control" id="Pregunta" placeholder="¿Cual es la pregunta?">
+
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col">
+          <label>puntos de premio?</label>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">no/si</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div id=”div2″ class="cajon2">
+  <div class="card centrar" style="width: 18rem;">
+    <img src="assets/bandera.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-info botone"><img src="assets/basura.png" width="16"></button>
+          <button type="button" class="btn btn-info botone"><img src="assets/cloud.png" width="18"></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div id=”div1″ class="cajon3">
+  <form>
+    <div class="form-group">
+      <label>Respuesta correcta</label>
+      <input type="text" class="form-control" id="Respuesta1" placeholder="Respuesta correcta">
+    </div>
+    <div class="form-group">
+        <label>Opcion 1</label>
+        <input type="text" class="form-control" id="Respuesta3" placeholder="Opcione de respuesta">
+        
+      </div>
+  </form>
+</div>
+<div id=”div1″ class="cajon4">
+    <form>
+      <div class="form-group">
+        <label>Opcion 2</label>
+        <input type="text" class="form-control" id="Respuesta2" placeholder="Opcion de respuesta">
+        
+      </div>
+      <div class="form-group">
+          <label>Opcion 3</label>
+          <input type="text" class="form-control" id="Respuesta4" placeholder="Opcion de respuesta">
+        </div>
+    </form>
+  </div>
+  <div>
+  <form>
+  <div class="form-group cajon5">
+      <label for="exampleFormControlTextarea1">Descripción</label>
+      <textarea class="form-control" id="descripcion" rows="3"></textarea>
+      
+    </div>
+    <div class="form-group cajon5">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+    </form>
+    </div>

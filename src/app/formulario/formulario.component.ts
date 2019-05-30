@@ -10,7 +10,7 @@ import { TipoRolEnum } from '../interfaces/rol.interface';
 })
 export class FormularioComponent implements OnInit {
   usuario = {} as IUsuario;
-  usuarios:IUsuario[];
+  
   constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit() {
@@ -18,9 +18,7 @@ export class FormularioComponent implements OnInit {
   registrarUsuario() {
      this.apiService.registrarusuario(this.usuario, TipoRolEnum.ROLE_ESTUDIANTE).subscribe(
       res => {
-        this.usuarios.push(res.body);
-
-
+      
         console.log(res);
   
         },

@@ -1,0 +1,78 @@
+.menu{
+    font-size: 90% ;
+    position: absolute;
+     right: 81px;
+    
+}
+.divi{
+    margin: 0;
+        padding: 0;
+        background-image: url('src/assets/fondo.png');
+      
+    }
+.fondo{
+    color:white;
+    margin-left: 60px;
+    text-align: center;
+    font-size: 30%;
+   
+   }
+.margen{
+    margin-top: 2px;
+  margin-left:300px;
+}
+.formulario{
+  
+    padding: 10%;
+}
+.cajon1{
+    float:left;
+    background:rgb(255, 255, 254);
+    margin-top: 6%;
+    padding: 2%;
+    width: 50%;
+    }
+.cajon2{
+    float:left;
+    background:rgb(255, 255, 254);
+    margin-top: 6%;
+    padding: 2%;
+    width: 50%;
+    align-content: center;
+    
+    }
+    .cajon3{
+        float:left;
+        background:rgb(255, 255, 254);
+        margin-top: 0.5%;
+        padding: 2%;
+        width: 50%;
+        align-content: center;
+        
+        }
+        .cajon4{
+            float:left;
+            background:rgb(255, 255, 254);
+            margin-top: 0.5%;
+            padding: 2%;
+            width: 50%;
+            align-content: center;
+            
+            }
+            .cajon5{
+                padding: 2%;
+            }
+.centrar{
+    margin-left:30%;
+}
+.fondoT{
+    background: rgba(255, 255, 254, 0.123);
+}
+.colores-card{
+    background-color:#b9b9b9;
+    opacity:20%;
+}
+.botone{
+    margin-left: 2px;
+    background-color:#f8f8f8;
+}

@@ -39,7 +39,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
          
-          <a class="dropdown-item" href="/actividad-profesor" *ngFor="let materia of materias">{{materia.nombre}}</a>
+          <a class="dropdown-item" href="/actividad-profesor/{{materia.id}}" *ngFor="let materia of materias">{{materia.nombre}}</a>
           
         </div>
       </li>
