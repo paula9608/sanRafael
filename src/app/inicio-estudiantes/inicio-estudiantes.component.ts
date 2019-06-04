@@ -8,9 +8,11 @@ import { IUsuario } from '../interfaces/usuario.interface';
 })
 export class InicioEstudiantesComponent implements OnInit {
 
+  nombre: string;
   constructor() { }
 
   ngOnInit() {
+    this.nombre =  localStorage.getItem('nombre');
   }
 
 }

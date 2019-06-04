@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Italler, GradoEnum } from '../interfaces/taller.interface';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
@@ -11,14 +11,15 @@ import { ActividadProfesorComponent } from '../actividad-profesor/actividad-prof
   styleUrls: ['./vista-taller.component.css']
 })
 export class VistaTallerComponent implements OnInit {
+  @Input() talleres; //This tells our component to treat quote as an input property from the parent compnent
   taller = {} as Italler;
   idMateria;
   materia: Imateria;
   keys = Object.keys;
   grados = GradoEnum;
-    activitad:ActividadProfesorComponent;
+  activitad:ActividadProfesorComponent;
 
-  constructor(private apiService: ApiService, private actRoute: ActivatedRoute) { 
+  constructor(private apiService: ApiService, private actRoute: ActivatedRoute, private router: Router) { 
     this.idMateria = this.actRoute.snapshot.paramMap.get('id');
   }
 
@@ -31,10 +32,10 @@ export class VistaTallerComponent implements OnInit {
 
   guardarTaller(){
     this.taller.materia = this.materia;
-    console.log(this.taller);
     this.apiService.guardarTaller(this.taller).subscribe(
       res=> {
-        this.taller=res.body;
+        this.taller = res.body;
+        this.talleres.push(this.taller);
       },
       err =>console.log(err)
   )

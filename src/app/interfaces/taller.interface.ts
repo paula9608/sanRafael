@@ -5,7 +5,8 @@ export interface Italler{
     titulo?:string,
     descripcion?: string,
     materia:Imateria,
-    grado?: GradoEnum   
+    grado?: GradoEnum,
+    tiempoMinutos: number   
 }
 
 export enum GradoEnum {

@@ -16,53 +16,69 @@ import { Irespuesta } from '../interfaces/respuesta.interface';
 export class ApiService {
 
   constructor(protected httpClient: HttpClient) { }
-  findByRolTipo(rol:TipoRolEnum): Observable<HttpResponse<IUsuario[]>> {
-   
-    return this.httpClient.get<IUsuario[]>(environment.pathApi + '/usuarios'+ '?tipo=' + rol,{observe: 'response'})
+  
+  findByRolTipo(rol: TipoRolEnum): Observable<HttpResponse<IUsuario[]>> {
+    return this.httpClient.get<IUsuario[]>(environment.pathApi + '/usuarios' + '?tipo=' + rol, { observe: 'response' })
   }
+
   findAllmaterias(): Observable<HttpResponse<Imateria[]>> {
-    return this.httpClient.get<Imateria[]>(environment.pathApi + '/materias', {observe: 'response'});
+    return this.httpClient.get<Imateria[]>(environment.pathApi + '/materias', { observe: 'response' });
   }
-   deleteById(id:number,tipo:TipoRolEnum):Observable<HttpResponse<IUsuario[]>>{
-         return this.httpClient.delete<IUsuario[]>(environment.pathApi+'/usuarios/'+id+'?tipo=' + tipo,{observe:'response'})
-   }
+
+  deleteById(id: number, tipo: TipoRolEnum): Observable<HttpResponse<IUsuario[]>> {
+    return this.httpClient.delete<IUsuario[]>(environment.pathApi + '/usuarios/' + id + '?tipo=' + tipo, { observe: 'response' })
+  }
+
   registrarusuario(usuario: IUsuario, tipoRol: TipoRolEnum): Observable<HttpResponse<IUsuario>> {
-    return this.httpClient.post<IUsuario>(environment.pathApi + '/usuarios' + '?rol=' + tipoRol, usuario,{observe: 'response'});
+    return this.httpClient.post<IUsuario>(environment.pathApi + '/usuarios' + '?rol=' + tipoRol, usuario, { observe: 'response' });
   }
 
-  guardarTaller(taller:Italler):Observable<HttpResponse<Italler>>{
-    return this.httpClient.post<Italler>(environment.pathApi + '/talleres',taller,{observe: 'response'})
-  }
-  findMateria(id:number):Observable<HttpResponse<Imateria>>{
-    return this.httpClient.get<Imateria>(environment.pathApi + '/materias/'+id, {observe: 'response'});
-  }
-  findtalleresByMateriaId(id:number):Observable<HttpResponse<Italler[]>>{
-    return this.httpClient.get<Italler[]>(environment.pathApi + '/talleres/materia/' + id, {observe: 'response'});
-  }
-deleteTaller(id:number,idMateria:number):Observable<HttpResponse<Italler[]>>{
-  return this.httpClient.delete<Italler[]>(environment.pathApi+'/talleres/'+id+'?idMateria=' + idMateria,{observe:'response'})
-}
-
-  findPreguntasByTallerId(id:number):Observable<HttpResponse<Ipregunta[]>>{
-    return this.httpClient.get<Ipregunta[]>(environment.pathApi+'/preguntas/taller'+identifierModuleUrl,{observe: 'response'})
-  }
-  guardarPregunta(pregunta:Ipregunta):Observable<HttpResponse<Ipregunta>>{
-   return this.httpClient.post<Ipregunta>(environment.pathApi+'/preguntas',pregunta,{observe: 'response'})
+  guardarTaller(taller: Italler): Observable<HttpResponse<Italler>> {
+    return this.httpClient.post<Italler>(environment.pathApi + '/talleres', taller, { observe: 'response' })
   }
 
+  findMateria(id: number): Observable<HttpResponse<Imateria>> {
+    return this.httpClient.get<Imateria>(environment.pathApi + '/materias/' + id, { observe: 'response' });
+  }
 
-  findRespuestasByPreguntaId(id:number):Observable<HttpResponse<Irespuesta[]>>{
-    return this.httpClient.get<Irespuesta[]>(environment.pathApi+'/respuestas/pregunta'+identifierModuleUrl,{observe: 'response'})
+  findtalleresByMateriaId(id: number): Observable<HttpResponse<Italler[]>> {
+    return this.httpClient.get<Italler[]>(environment.pathApi + '/talleres/materia/' + id, { observe: 'response' });
   }
-  guardarRespuesta(respuesta:Irespuesta):Observable<HttpResponse<Irespuesta>>{
-   return this.httpClient.post<Irespuesta>(environment.pathApi+'/respuestas',respuesta,{observe: 'response'})
+
+  deleteTaller(id: number, idMateria: number): Observable<HttpResponse<Italler[]>> {
+    return this.httpClient.delete<Italler[]>(environment.pathApi + '/talleres/' + id + '?idMateria=' + idMateria, { observe: 'response' })
   }
- 
+
+  findPreguntasByTallerId(id: number): Observable<HttpResponse<Ipregunta[]>> {
+    return this.httpClient.get<Ipregunta[]>(environment.pathApi + '/preguntas/taller/' + id, { observe: 'response' })
+  }
+
+  guardarPregunta(pregunta: Ipregunta): Observable<HttpResponse<Ipregunta>> {
+    return this.httpClient.post<Ipregunta>(environment.pathApi + '/preguntas', pregunta, { observe: 'response' })
+  }
+
+  findRespuestasByPreguntaId(id: number): Observable<HttpResponse<Irespuesta[]>> {
+    return this.httpClient.get<Irespuesta[]>(environment.pathApi + '/respuestas/pregunta/' + id, { observe: 'response' })
+  }
+
+  guardarRespuestas(respuestas: Irespuesta[]): Observable<HttpResponse<Irespuesta[]>> {
+    return this.httpClient.post<Irespuesta[]>(environment.pathApi + '/respuestas', respuestas, { observe: 'response' });
+  }
+  deletePregunta(id: number, idTaller: number): Observable<HttpResponse<Ipregunta[]>> {
+    return this.httpClient.delete<Ipregunta[]>(environment.pathApi + '/preguntas/' + id + '?idTaller=' + idTaller, { observe: 'response' })
+  }
+  findTallerById(id: number): Observable<HttpResponse<Italler>> {
+    return this.httpClient.get<Italler>(environment.pathApi + '/talleres/' + id, { observe: 'response' });
+  }
+
+  findTallerByGrado(grado: string): Observable<HttpResponse<Italler[]>> {
+    return this.httpClient.get<Italler[]>(environment.pathApi + '/talleres/usuario/' + grado, { observe: 'response' });
+  }
 
   login(username: string, password: string) {
-    let  httpParams = new HttpParams()
-    .append("username", username)
-    .append("password", password);
-    return this.httpClient.post<IUsuario>(environment.pathApi + '/usuarios/login', httpParams, {observe: 'response'})
+    let httpParams = new HttpParams()
+      .append("username", username)
+      .append("password", password);
+    return this.httpClient.post<IUsuario>(environment.pathApi + '/usuarios/login', httpParams, { observe: 'response' })
   }
 }

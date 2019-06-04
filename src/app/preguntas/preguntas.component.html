@@ -26,7 +26,7 @@
   <form>
     <div class="form-group">
       <label>Pregunta</label>
-      <input type="text" class="form-control" id="Pregunta" placeholder="¿Cual es la pregunta?">
+      <input type="text" class="form-control" name="pregunta" id="Pregunta" placeholder="¿Cual es la pregunta?" [(ngModel)]="pregunta.nombre">
 
     </div>
     <div class="form-group">
@@ -34,7 +34,7 @@
         <div class="col">
           <label>puntos de premio?</label>
           <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1" [(ngModel)]="pregunta.premio" name="premio">
             <label class="custom-control-label" for="customSwitch1">no/si</label>
           </div>
         </div>
@@ -60,11 +60,11 @@
   <form>
     <div class="form-group">
       <label>Respuesta correcta</label>
-      <input type="text" class="form-control" id="Respuesta1" placeholder="Respuesta correcta">
+      <input type="text" name="correcta" [(ngModel)]="respuestas[0].nombre" class="form-control" id="Respuesta1" placeholder="Respuesta correcta">
     </div>
     <div class="form-group">
         <label>Opcion 1</label>
-        <input type="text" class="form-control" id="Respuesta3" placeholder="Opcione de respuesta">
+        <input type="text" class="form-control" id="Respuesta3" name="res3" [(ngModel)]="respuestas[1].nombre" placeholder="Opcione de respuesta">
         
       </div>
   </form>
@@ -73,12 +73,12 @@
     <form>
       <div class="form-group">
         <label>Opcion 2</label>
-        <input type="text" class="form-control" id="Respuesta2" placeholder="Opcion de respuesta">
+        <input type="text" class="form-control" name="res2" [(ngModel)]="respuestas[2].nombre" id="Respuesta2" placeholder="Opcion de respuesta">
         
       </div>
       <div class="form-group">
           <label>Opcion 3</label>
-          <input type="text" class="form-control" id="Respuesta4" placeholder="Opcion de respuesta">
+          <input type="text" class="form-control" id="Respuesta4" name="res4" [(ngModel)]="respuestas[3].nombre" c placeholder="Opcion de respuesta">
         </div>
     </form>
   </div>
@@ -86,11 +86,11 @@
   <form>
   <div class="form-group cajon5">
       <label for="exampleFormControlTextarea1">Descripción</label>
-      <textarea class="form-control" id="descripcion" rows="3"></textarea>
+      <textarea name="descripcion" class="form-control" id="descripcion" rows="3" [(ngModel)]="pregunta.descripcion"></textarea>
       
     </div>
     <div class="form-group cajon5">
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="submit" class="btn btn-primary" (click)="guardar()">Guardar</button>
     </div>
     </form>
     </div>

@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 3px;  
+}
+.divClaseActividad {
+    margin: 0;
+    padding: 0;
+    background-image: url('src/assets/fondo.png');
+    background-color: #17a2b8;
+    height: 121vh;
+}
+div#nav1-row{
+  margin-top: 60px;
+}
+div#infoestudiante{
+  margin-left: 400px;
+  
+}
+actividad.container #tabla#tablaItems {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 3px solid rgb(12, 12, 12);
+  background-color: #EAEAEA;
+}  
+div#lista{
+  background: rgb(200, 228, 241);
+  border: 3px solid rgb(12, 12, 12);
+  margin-left: 90px;
+  margin-top: 50px;
+  
+}  
+.columna0{
+  margin-right: 10px;
+}
+
+
+#juego {
+  opacity: 0.3;
+  width: 580px;
+  height: 580px;
+}
+
+table {
+  width: 80%;
+  height: 80%;
+}
+
+td {
+  width: 25%;
+  height: 25%;
+  background-color: black;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.letra {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  font-style: italic;
+}
+
+input {
+  width: 90px;
+  height: 30px;
+}
+
+.centrar {
+  margin-left: 210px;
+}
+
+.centrar-juego {
+  margin-left: 28%;
+}
+
+.centrar-botones {
+  margin-left: 12%;
+}

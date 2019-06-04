@@ -24,13 +24,19 @@
           </div>
 
           <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-">
               <label for="inputGrado">Grupo</label>
               
               <select #grado="ngModel" type="text" name="grado" id="grado" class="form-control"
                 [(ngModel)]="taller.grado" required>>
                 <option *ngFor="let symbol of keys(grados)" [ngValue]="grados[symbol]">{{symbol}}</option>
               </select>
+            </div>
+
+            <div class="form-group col-md-">
+              <label for="tiempo">Tiempo de juego:</label>
+              <input #descripcion="ngModel" type="number" name="tiempo" id="tiempo" placeholder="Tiempo"
+                class="form-control" [(ngModel)]="taller.tiempoMinutos" required>
             </div>
           </div>
 

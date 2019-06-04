@@ -29,7 +29,7 @@
 
     <div id="infoEstudiante" class="row">
       <div class="col-sm">
-        <h2 style="color:#FFFFFF">Nombre del estudiante</h2>
+        <h2 style="color:#FFFFFF">{{nombre}}</h2>
       </div>
       <div class="col col-lg-2">
         <h2 style="color:#FFFFFF" id="nombre">Grado</h2>
@@ -39,27 +39,15 @@
       <div class="col-sm">
         <div id="lista" class="container">
           <ul class="list-unstyled">
+            <a *ngFor="let taller of talleres" routerLink="/jugar/preguntas/{{taller.id}}" routerLinkActive="router-link-active" >
               <li class="media">
                 <img src="assets/flecha.png" class="mr-3" >
                 <div class="media-body">
-                  <h5 class="mt-0 mb-1">Crucigrama numérico</h5>
-                  Escribe en el crucigrama los resultados de las operaciones propuestas
+                  <h5 class="mt-0 mb-1">{{taller.titulo}}</h5>
+                    {{taller.descripcion}}
                 </div>
               </li>
-              <li class="media my-4">
-                <img src="assets/flecha.png" class="mr-3">
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">Taller tipo Icfes</h5>
-                  Debes seleccionar la respuesta correcta según el texto leído.
-                </div>
-              </li>
-              <li class="media">
-                <img src="assets/flecha.png" class="mr-3" >
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">Relacionar</h5>
-                  Relaciona cada uno de los colores con la fruta adecuada.
-                </div>
-              </li>
+            </a>
             </ul>
           </div>
     </div>

@@ -1,2 +1,29 @@
 <div class="divi">
+  <div class="container container-fondo">
+    <img src="http://gifgifs.com/animations/jobs-people/teachers/Professor_3.gif">
+    ¿Tienes nuevo material?
   </div>
+  <div class="list-group alinear-contenedor">
+      <a class="list-group-item list-group-item-action active cabecera-fondo bg-info  text-white" >
+        Taller
+      </a>
+      <ng-container *ngFor="let pregunta of preguntas">
+        <a class="list-group-item list-group-item-action"><span>
+            <h5>{{pregunta.nombre}}</h5>
+            <img src="assets/pregunta.png">
+            <button class="btn btn-outline-secondary bg-info text-white alinear-icono" type="button" id="eliminar"
+              (click)="eliminarPregunta(pregunta.id)">
+              <img src="assets/basura.png" width="17"> 
+            </button>
+            <p> Descripcion: {{pregunta.descripcion}}<br />
+            <br />Puntos de premio: {{pregunta.premio ? 'SI' : 'NO'}}</p>
+          </span>
+        </a>
+      </ng-container>
+    
+    </div>
+
+  </div>
+  
+
+

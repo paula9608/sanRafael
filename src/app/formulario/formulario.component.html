@@ -1,3 +1,4 @@
+
 <!-- Bookmark form -->
 <div class="modal fade" id="bookmarkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -7,7 +8,7 @@
         </div>
         <div class="modal-body">
           
-            <form id="bookmarkForm">
+            <form id="bookmarkForm" #form="ngForm">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputName">Nombre</label>
@@ -44,17 +45,12 @@
                   </div>
                   <div class="form-row">
                   <div class="form-group col-md-4">
-                      <label for="inputGrado">Grado</label>
+                      <label for="grado">Grado</label>
                       
-                      <select input #grado="ngModel" type="text" name="grado" id="grado" class="form-control" [(ngModel)]="usuario.grado" required>>
-                          <option selected>Grado</option>
-                          <option>preescolar</option>
-                          <option>primero</option>
-                          <option>segundo</option>
-                          <option>tercero</option>
-                          <option>cuarto</option>
-                          <option>quinto</option>
-                        </select>
+                      <select #grado="ngModel" type="text" name="grado" id="grado" class="form-control"
+                      [(ngModel)]="gradoEnum" required>
+                      <option *ngFor="let symbol of keys(grados)" [ngValue]="grados[symbol]">{{symbol}}</option>
+                    </select>
                     </div>
                   </div>
                  
