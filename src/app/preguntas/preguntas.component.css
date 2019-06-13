@@ -4,6 +4,11 @@
      right: 81px;
     
 }
+div#formulario1{
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
 .divi{
     margin: 0;
         padding: 0;
@@ -31,6 +36,7 @@
     margin-top: 6%;
     padding: 2%;
     width: 50%;
+    align-content: center;
     }
 .cajon2{
     float:left;
@@ -40,6 +46,10 @@
     width: 50%;
     align-content: center;
     
+    }
+    div#div3{
+        margin-left: auto;
+        margin-top: 0%;
     }
     .cajon3{
         float:left;
@@ -60,7 +70,9 @@
             
             }
             .cajon5{
-                padding: 2%;
+                margin-top:5%;
+                margin-left: 35%;
+                align-content: center;
             }
 .centrar{
     margin-left:30%;
@@ -75,4 +87,9 @@
 .botone{
     margin-left: 2px;
     background-color:#f8f8f8;
+}
+.separar{
+    margin-top: 15%;
+    margin-left: auto;
+    width: 206%;
 }

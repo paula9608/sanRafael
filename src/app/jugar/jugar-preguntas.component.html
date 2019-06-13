@@ -38,23 +38,31 @@
     </div>
     <div id="tabla" class="row">
       <div class="col-sm">
-        <div id="lista" class="container">
+        <div *ngIf="estado==false" id="lista" class="container">
           <div class="alert alert-info">
+              
             <h4 class="alert-heading mx-auto" style="width: 200px;">{{preguntaActual.nombre}} ?</h4>
             <p>{{preguntaActual.descripcion}}</p>
           </div>
         </div>
-      </div>
+        
+          <div class="cajon1" *ngFor="let item of ruta">
+              <img src={{item}} width="102" height="102">
+            </div>
+       </div>
+    
     </div>
 
     <div>
-      <ul class="list-group w-75 mx-auto">
-        <li class="list-group-item list-group-item-danger p-4 mt-2" (click)="seleccionar(respuestas[0])">{{respuestas[0].nombre}}</li>
+      <ul class="list-group w-75 mx-auto"> 
+          
+        
+        <li class="list-group-item list-group-item-danger p-4 mt-2" (click)="seleccionar(respuestas[0])">{{respuestas[0].nombre}} </li> 
         <li class="list-group-item list-group-item-success p-4 mt-2" (click)="seleccionar(respuestas[1])">{{respuestas[1].nombre}}</li>
         <li class="list-group-item list-group-item-warning p-4 mt-2" (click)="seleccionar(respuestas[2])">{{respuestas[2].nombre}}</li>
         <li class="list-group-item list-group-item-info p-4 mt-2" (click)="seleccionar(respuestas[3])">{{respuestas[3].nombre}}</li>
       </ul>
     </div>
   </div>
-
+ 
 </div>

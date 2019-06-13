@@ -23,9 +23,9 @@
       <a class="list-group-item list-group-item-action"><span>
           <h5>{{taller.titulo}}</h5>
 
-          <img src="assets/calculadora.png" *ngIf="idMateria== 1">
+          <img src="assets/calculadora.png" *ngIf="idMateria== 1" width='35'>
           <img src="assets/libro.png" *ngIf="idMateria== 2">
-          <button class="btn btn-outline-secondary bg-info text-white alinear-icono" type="button" id="eliminar"
+          <button  class="btn btn-outline-secondary bg-info text-white alinear-icono" type="button" id="eliminar"
             (click)="eliminarTaller(taller.id)">
             <img src="assets/basura.png" width="17"> 
           </button>
@@ -36,7 +36,7 @@
 
           <a routerLink="/tallerEditar/{{taller.id}}" class="btn btn-outline-secondary bg-info text-white alinear-otro"
           id="edit"> 
-            <img src="assets/pregunta.png" width="18"> 
+            <img src="assets/edit.png" width="19"> 
           </a>
           <p> Descripcion: {{taller.descripcion}}<br />
           <br />grupo:{{taller.grado}}</p>

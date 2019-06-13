@@ -11,18 +11,19 @@
             <h1 style="color:#FFFFFF">Colegio San Rafael</h1>
           </div>
           <div class="col col-lg-2">
-              <div class="row">
-                  <div id="columna0" class="col">
-                      <div id="cerrar" class="text-right">
-                        <a [routerLink]="['/login']" class="text-info">Cerrar sesión</a>
-                      </div>
-                    </div>
-                    <div id="columna1" class="col-sm">
-                      <input id="volver" type=image src="assets/home.png" width="40" height="40"
-                        onclick="location.href='/inicioestudiante'">
-                    </div> </div>
-                
+            <div class="row">
+              <div id="columna0" class="col">
+                <div id="cerrar" class="text-right">
+                  <a [routerLink]="['/login']" class="text-info">Cerrar sesión</a>
+                </div>
+              </div>
+              <div id="columna1" class="col-sm">
+                <input id="volver" type=image src="assets/home.png" width="40" height="40"
+                  onclick="location.href='/inicioestudiante'">
+              </div>
             </div>
+
+          </div>
         </div>
       </nav>
     </div>
@@ -35,8 +36,38 @@
         <h2 style="color:#FFFFFF" id="nombre">Grado</h2>
       </div>
     </div>
-    
-    <a id="juego" class="btn btn-danger" [routerLink]="['/juego-parejas']">Juego parejas</a>
+    <div class="container-target">
+      <div id="target-row" class="row justify-content-center align-items-center">
+        <div id="target-col-uno" class="col-sm justify-content-center align-items-center">
+          <div class="card" style="width: 18rem;">
+            <img src="assets/Parejas.png" class="card-img-top">
+            <div id="card-uno" class="card-body">
+              <h5 class="card-title">Juego de parejas</h5>
+              <p class="card-text">Deberás encontrar las parejas de números
+                <div>
+                <a href="/juego-parejas" class="btn btn-primary">Jugar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="target-col " class="col-sm justify-content-center align-items-center">
+          <div class="card " style="width: 18rem;">
+            <img src="assets/fraccion.png" class="card-img-top" height="170">
+            <div id="card-dos" class="card-body">
+              <h5 class="card-title">Juego de Fracciones</h5>
+              <p class="card-text">Juega cada fraccion con su presentacion visual
+                <div>
+                <a href="/jugar-fraciones" class="btn btn-primary">Jugar</a>
+                </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </div>

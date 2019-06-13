@@ -1,96 +1,91 @@
-<div id="nav-row" class="row">
-  <nav id="nav" class="navbar navbar-expand-md navbar-dark divi fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="container ">
+  <div id="nav-row" class="row">
+    <nav id="nav" class="navbar navbar-expand-md navbar-dark divi fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <div class="col-sm">
-        <div id="cerrar" class="text-left">
-          <a [routerLink]="['/actividad-profesor']" style="color:#FFFFFF">cerrar</a>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="col-sm">
+          <div id="cerrar" class="text-left">
+            <a [routerLink]="['/actividad-profesor']" style="color:#FFFFFF">cerrar</a>
+          </div>
         </div>
-      </div>
-      <div id="titulo" class="col-sm fondo">
-        <h3 style="color:#FFFFFF">Pregunta</h3>
-      </div>
-      <div class="col-sm">
-        <div id="next" class="text-sucess margen">
-          <a href="/admin" class="btn btn-info  mb-3 bg-success">Siguiente</a>
+        <div id="titulo" class="col-sm fondo">
+          <h3 style="color:#FFFFFF">Pregunta</h3>
         </div>
-      </div>
-    </div>
-  </nav>
-</div>
-<div id=”div1″ class="cajon1">
-  <form>
-    <div class="form-group">
-      <label>Pregunta</label>
-      <input type="text" class="form-control" name="pregunta" id="Pregunta" placeholder="¿Cual es la pregunta?" [(ngModel)]="pregunta.nombre">
-
-    </div>
-    <div class="form-group">
-      <div class="row">
-        <div class="col">
-          <label>puntos de premio?</label>
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1" [(ngModel)]="pregunta.premio" name="premio">
-            <label class="custom-control-label" for="customSwitch1">no/si</label>
+        <div class="col-sm">
+          <div id="next" class="text-sucess margen">
+            <a href="/admin" class="btn btn-info  mb-3 bg-success">Siguiente</a>
           </div>
         </div>
       </div>
-    </div>
-  </form>
-</div>
-<div id=”div2″ class="cajon2">
-  <div class="card centrar" style="width: 18rem;">
-    <img src="assets/bandera.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <div class="row">
-        <div class="col">
-          <button type="button" class="btn btn-info botone"><img src="assets/basura.png" width="16"></button>
-          <button type="button" class="btn btn-info botone"><img src="assets/cloud.png" width="18"></button>
-        </div>
-
-      </div>
-    </div>
+    </nav>
   </div>
-</div>
-<div id=”div1″ class="cajon3">
-  <form>
-    <div class="form-group">
-      <label>Respuesta correcta</label>
-      <input type="text" name="correcta" [(ngModel)]="respuestas[0].nombre" class="form-control" id="Respuesta1" placeholder="Respuesta correcta">
-    </div>
-    <div class="form-group">
-        <label>Opcion 1</label>
-        <input type="text" class="form-control" id="Respuesta3" name="res3" [(ngModel)]="respuestas[1].nombre" placeholder="Opcione de respuesta">
-        
-      </div>
-  </form>
-</div>
-<div id=”div1″ class="cajon4">
-    <form>
-      <div class="form-group">
-        <label>Opcion 2</label>
-        <input type="text" class="form-control" name="res2" [(ngModel)]="respuestas[2].nombre" id="Respuesta2" placeholder="Opcion de respuesta">
-        
-      </div>
-      <div class="form-group">
-          <label>Opcion 3</label>
-          <input type="text" class="form-control" id="Respuesta4" name="res4" [(ngModel)]="respuestas[3].nombre" c placeholder="Opcion de respuesta">
+  <div id="inicio" class="row">
+    <div class="col-sm">
+      <form>
+        <div class="form-group separar">
+          <label>Pregunta</label>
+          <input type="text" class="form-control" name="pregunta" id="Pregunta" placeholder="¿Cual es la pregunta?"
+            [(ngModel)]="pregunta.nombre">
+
         </div>
-    </form>
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label>puntos de premio?</label>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1" [(ngModel)]="pregunta.premio"
+                  name="premio">
+                <label class="custom-control-label" for="customSwitch1">no/si</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-">
+            <label for="inputTipo">Tipo</label>
+            
+            <select #tipo="ngModel" type="text" name="tipo" id="tipo" class="form-control"
+              [(ngModel)]="pregunta.tipo" required>>
+              <option *ngFor="let symbol of keys(tipos)" [ngValue]="tipos[symbol]">{{symbol}}</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm separar">
+
+      <form id="formulario1 ">
+        <div class="form-group">
+          <label>Respuesta correcta</label>
+          <input type="text" name="correcta" [(ngModel)]="respuestas[0].nombre" class="form-control" id="Respuesta1"
+            placeholder="Respuesta correcta">
+        </div>
+        <div class="form-group">
+          <label>Opcion 1</label>
+          <input type="text" class="form-control" id="Respuesta3" name="res3" [(ngModel)]="respuestas[1].nombre"
+            placeholder="Opcion de respuesta">
+
+        </div>
+        <div class="form-group">
+          <label>Opcion 2</label>
+          <input type="text" class="form-control" name="res2" [(ngModel)]="respuestas[2].nombre" id="Respuesta2"
+            placeholder="Opcion de respuesta">
+
+        </div>
+        <div class="form-group">
+          <label>Opcion 3</label>
+          <input type="text" class="form-control" id="Respuesta4" name="res4" [(ngModel)]="respuestas[3].nombre" c
+            placeholder="Opcion de respuesta">
+        </div>
+      </form>
+    </div>
+
   </div>
   <div>
-  <form>
-  <div class="form-group cajon5">
-      <label for="exampleFormControlTextarea1">Descripción</label>
-      <textarea name="descripcion" class="form-control" id="descripcion" rows="3" [(ngModel)]="pregunta.descripcion"></textarea>
-      
-    </div>
-    <div class="form-group cajon5">
-    <button type="submit" class="btn btn-primary" (click)="guardar()">Guardar</button>
-    </div>
-    </form>
-    </div>
+    <button type="submit" class="btn btn-primary cajon5" (click)="guardar()">Guardar</button>
+  </div>
+</div>
