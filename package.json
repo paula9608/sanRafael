@@ -19,7 +19,7 @@
     "@angular/compiler-cli": "~7.2.0",
     "@angular/core": "~7.2.0",
     "@angular/forms": "~7.2.0",
-    "@angular/http": "~7.2.0",
+    "@angular/http": "7.2.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
@@ -57,7 +57,7 @@
     "typescript": "~3.2.2"
   },
   "engines": {
-    "node": "6.11.0",
-    "npm": "3.10.10"
+    "node": "10.15.3",
+    "npm": "6.4.1"
   }
 }
