@@ -16,7 +16,6 @@ import { VistaTallerComponent } from './vista-taller/vista-taller.component';
 import { InicioEstudiantesComponent } from './inicio-estudiantes/inicio-estudiantes.component';
 import { TallerEditarComponent } from './taller-editar/taller-editar.component';
 import { ActividadProfesorComponent } from './actividad-profesor/actividad-profesor.component';
-import { FormularioEditarComponent } from './formulario-editar/formulario-editar.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { VistaActividadesComponent } from './vista-actividades/vista-actividades.component';
 import { VistaDocumentosComponent } from './vista-documentos/vista-documentos.component';
