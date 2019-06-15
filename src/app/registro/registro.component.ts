@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { IUsuario } from '../interfaces/usuario.interface';
-import { AlertsService } from 'angular-alert-module';
 import Swal from 'sweetalert2'
 import { ApiService } from '../services/api.service';
 import { RouterModule, Router } from '@angular/router';
