@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { IUsuario } from '../interfaces/usuario.interface';
 import Swal from 'sweetalert2'
 import { ApiService } from '../services/api.service';
-import { RouterModule, Router } from '@angular/router';
 import { TipoRolEnum } from '../interfaces/rol.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
