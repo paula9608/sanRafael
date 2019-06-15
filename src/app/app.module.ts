@@ -11,7 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 import { FormsModule } from '@angular/forms';
-import { AlertsModule } from 'angular-alert-module'; 
+
 import { VistaTallerComponent } from './vista-taller/vista-taller.component';
 import { InicioEstudiantesComponent } from './inicio-estudiantes/inicio-estudiantes.component';
 import { TallerEditarComponent } from './taller-editar/taller-editar.component';
@@ -80,7 +80,7 @@ const rutas = [
     AppRoutingModule,
     RouterModule.forRoot(rutas),
     HttpClientModule,
-    AlertsModule.forRoot(),
+    
     FormsModule
   ],
   providers: [],
