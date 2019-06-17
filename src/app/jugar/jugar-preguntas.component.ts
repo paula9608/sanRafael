@@ -56,7 +56,7 @@ export class JugarPreguntasComponent implements OnInit {
     this.preguntaActual = this.preguntas[this.indexActual];
     this.estado = false;
     this.cargarImagen();
-    this.sortearRespuestas();
+    
     this.apiService.findRespuestasByPreguntaId(this.preguntas[this.indexActual].id).subscribe(
       res => this.respuestas = res.body,
       err => console.log(err)
