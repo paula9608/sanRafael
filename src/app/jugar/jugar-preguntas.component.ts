@@ -178,7 +178,7 @@ var parametro='';
     var posicion=0;
     var lastNumber = 0;
        var RandomNumber = Math.floor(Math.random() * 4);  
-        if(RandomNumber != lastNumber && posicion<=limite){
+        if((RandomNumber != lastNumber) && posicion<=4 ){
             var random = RandomNumber;
             lastNumber = RandomNumber;
             numeros.push(random);
