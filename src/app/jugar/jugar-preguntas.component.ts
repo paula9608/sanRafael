@@ -26,7 +26,7 @@ export class JugarPreguntasComponent implements OnInit {
   audios:String[];
   estado: boolean;
   tipos=TipoEnum;
-  arreglo=[];
+  arreglo:number[]=[];
   constructor(private apiService: ApiService, private actRoute: ActivatedRoute, private router: Router) {
     this.id = this.actRoute.snapshot.paramMap.get('id');
     
