@@ -26,6 +26,7 @@ export class JugarPreguntasComponent implements OnInit {
   audios:String[];
   estado: boolean;
   tipos=TipoEnum;
+  arreglo: number[];
   constructor(private apiService: ApiService, private actRoute: ActivatedRoute, private router: Router) {
     this.id = this.actRoute.snapshot.paramMap.get('id');
 
@@ -55,6 +56,7 @@ export class JugarPreguntasComponent implements OnInit {
     this.preguntaActual = this.preguntas[this.indexActual];
     this.estado = false;
     this.cargarImagen();
+    this.sortearRespuestas();
     this.apiService.findRespuestasByPreguntaId(this.preguntas[this.indexActual].id).subscribe(
       res => this.respuestas = res.body,
       err => console.log(err)
@@ -169,4 +171,22 @@ var parametro='';
     audio.play();
 
   }
+  sortearRespuestas(){
+ 
+    var limite=3;
+    var posicion=0;
+    var lastNumber = 0;
+       var RandomNumber = Math.floor(Math.random() * 3);  
+        if(RandomNumber != lastNumber && posicion<=limite){
+            var random = RandomNumber;
+            lastNumber = RandomNumber;
+             this.arreglo[posicion]=random;
+             posicion++;
+        }else{
+            this.sortearRespuestas();
+        }
+    
+      }
+    
+  
 }
