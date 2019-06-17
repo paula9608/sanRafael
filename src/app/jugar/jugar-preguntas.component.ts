@@ -29,12 +29,12 @@ export class JugarPreguntasComponent implements OnInit {
   arreglo: number[];
   constructor(private apiService: ApiService, private actRoute: ActivatedRoute, private router: Router) {
     this.id = this.actRoute.snapshot.paramMap.get('id');
-
+    
   }
 
   ngOnInit() {
     this.apiService.findTallerById(this.id).subscribe(
-
+   
       res => {
         this.taller = res.body;
         this.reproducir('./assets/goats.mp3', true);
@@ -55,6 +55,8 @@ export class JugarPreguntasComponent implements OnInit {
   cargarRespuestas() {
     this.preguntaActual = this.preguntas[this.indexActual];
     this.estado = false;
+    this.arreglo=this.sortearRespuestas();
+    console.log(this.arreglo[0]+"");
     this.cargarImagen();
     
     this.apiService.findRespuestasByPreguntaId(this.preguntas[this.indexActual].id).subscribe(
@@ -171,8 +173,8 @@ var parametro='';
     audio.play();
 
   }
-  sortearRespuestas(){
- 
+  sortearRespuestas():number[]{
+   var numeros:number[];
     var limite=3;
     var posicion=0;
     var lastNumber = 0;
@@ -180,12 +182,12 @@ var parametro='';
         if(RandomNumber != lastNumber && posicion<=limite){
             var random = RandomNumber;
             lastNumber = RandomNumber;
-             this.arreglo[posicion]=random;
+             numeros[posicion]=random;
              posicion++;
         }else{
             this.sortearRespuestas();
         }
-    
+    return numeros;
       }
     
   
