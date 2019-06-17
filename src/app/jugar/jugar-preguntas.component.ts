@@ -182,7 +182,8 @@ var parametro='';
         if(RandomNumber != lastNumber && posicion<=limite){
             var random = RandomNumber;
             lastNumber = RandomNumber;
-             numeros[posicion]=random;
+            numeros.push(random);
+            
              posicion++;
         }else{
             this.sortearRespuestas();
