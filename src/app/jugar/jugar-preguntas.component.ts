@@ -175,10 +175,10 @@ var parametro='';
   }
   sortearRespuestas():number[]{
    var numeros:number[]=[];
-    var limite=3;
+    var limite=4;
     var posicion=0;
     var lastNumber = 0;
-       var RandomNumber = Math.floor(Math.random() * 3);  
+       var RandomNumber = Math.floor(Math.random() * 4);  
         if(RandomNumber != lastNumber && posicion<=limite){
             var random = RandomNumber;
             lastNumber = RandomNumber;
