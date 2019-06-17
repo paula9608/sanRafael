@@ -54,7 +54,7 @@
     </div>
 
     <div>
-      <ul class="list-group w-75 mx-auto"> 
+      <ul *ngFor="let numero of arreglo"class="list-group w-75 mx-auto"> 
           
         
         <li class="list-group-item list-group-item-danger p-4 mt-2" (click)="seleccionar(respuestas[arreglo[0]])">{{respuestas[arreglo[0]].nombre}} </li> 

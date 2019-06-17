@@ -26,7 +26,7 @@ export class JugarPreguntasComponent implements OnInit {
   audios:String[];
   estado: boolean;
   tipos=TipoEnum;
-  arreglo: number[]=[];
+  arreglo=[];
   constructor(private apiService: ApiService, private actRoute: ActivatedRoute, private router: Router) {
     this.id = this.actRoute.snapshot.paramMap.get('id');
     
@@ -173,7 +173,7 @@ var parametro='';
 
   }
   sortearRespuestas():number[]{
-   var numeros:number[]=[];
+   var numeros =[];
     var limite=4;
     var posicion=0;
     var lastNumber = 0;
