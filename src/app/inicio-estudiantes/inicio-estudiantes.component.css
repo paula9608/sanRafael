@@ -25,13 +25,15 @@ div#nombre{
 
 div#target-col-uno{
   text-align: center;
-  
+ 
+}
+div#infoEstudiante{
+background-image: url('src/assets/Encabezado.png');
+height: 100px;
+}
+div#pie{
+  text-align: center;
+background-image: url('src/assets/pie.png');
+height: 150px;
 }
 
-.div-principalIni {
-  margin: 0;
-  padding: 0;
-  background-image: url('src/assets/fondo.png');
-  background-color: #17a2b8;
-  height: 100vh;
-}
