@@ -11,7 +11,7 @@ import { IUsuario } from '../interfaces/usuario.interface';
   styleUrls: ['./login-estudiante.component.css']
 })
 export class LoginEstudianteComponent implements OnInit {
-keys = Object;
+keys = Object.name;
  username: any = {};
   password: string;
   usuario:IUsuario;
