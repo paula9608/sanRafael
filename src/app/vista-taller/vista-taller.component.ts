@@ -6,6 +6,7 @@ import { Imateria } from '../interfaces/materia.interface';
 import { ActividadProfesorComponent } from '../actividad-profesor/actividad-profesor.component';
 
 @Component({
+  //mmama
   selector: 'app-vista-taller',
   templateUrl: './vista-taller.component.html',
   styleUrls: ['./vista-taller.component.css']
