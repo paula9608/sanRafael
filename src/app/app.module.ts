@@ -30,7 +30,7 @@ import { InicioLoginComponent } from './inicio-login/inicio-login.component';
 
 const rutas = [
   { path: 'preguntas/:id', component: PreguntasComponent },
-  { path: '', component: LoginComponent },
+ 
   { path: 'home', component: HomeComponent },
   { path: 'actividad-profesor/:id', component: ActividadProfesorComponent },
   { path: 'login', component: LoginComponent },
@@ -51,7 +51,7 @@ const rutas = [
   { path: 'jugar/preguntas/:id', component: JugarPreguntasComponent },
   {path:'jugar-fraciones', component:JugarFracionesComponent},
   {path:'login-estudiante', component:LoginEstudianteComponent},
-  {path:'inicio-login',component:InicioLoginComponent}
+  {path:'',component:InicioLoginComponent}
 ];
 
 
