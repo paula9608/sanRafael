@@ -26,6 +26,41 @@ export class LoginEstudianteComponent implements OnInit {
       err=>console.log(err)
     )
   }
+  login() {
+    this.usuarios.forEach(element => {
+      if(this.username==element.nombre){
+        this.password=element.password;
+      }
+    });
+    this.apiService.login(this.username, this.password).subscribe(
+      res => {
+       
+       this.usuario= res.body;
+        this.redirectLogin(this.usuario.rol.tipo);
+        console.log(res);
+ 
+       },
+      err => {       
+        console.log(err);
+        Swal.fire({
+        type: 'error',
+        title: 'ERROR',
+        text: 'password o username incorrectos!',
+      })
+    }
+    );
+  }
+  redirectLogin( rol: TipoRolEnum) {
+    localStorage.setItem('id', this.usuario.id.toString());
+    localStorage.setItem('nombre', this.usuario.nombre + ' ' + this.usuario.apellido);
+    localStorage.setItem('grado', this.usuario.grado);
+    localStorage.setItem('rol', this.usuario.rol.tipo)
 
-  
+    if (rol === TipoRolEnum.ROLE_PROFESOR) {
+      this.router.navigateByUrl('/home');
+    } else {
+      this.router.navigateByUrl('/inicio-estudiante');
+    }
+  }
 }
+  

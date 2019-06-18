@@ -37,7 +37,8 @@
             
             <h4>¡Selecciona tu nombre de la lista!</h4>
            <select style="margin-top: 35px;width: 430px;margin-left: 0.5px;" class="form-control form-control-lg"  >
-            <option *ngFor="let usuario of usuarios" >{{usuario.nombre}}</option>
+            <option value="">--Elige opcion--</option>
+            <option [(ngModel)]="username" value="usaurio.nombre" *ngFor="let usuario of usuarios" >{{usuario.nombre}}</option>
           </select>
                <a id="ingreso" style="margin-top: 50px; width: 16rem;" href="/inicio-estudiante" class="btn btn-primary" >Ingresar</a>
              </div>
@@ -46,7 +47,6 @@
         <img style="margin-right: 50px" src="assets/Ver.gif" >      
         </div>
       </div>
-      <h2 >nombre</h2>
       <div id="pie" class="row">
         <h4  style="margin-left: 400px; margin-top: 50px " >Institución Educativa rural San Rafael sede el Pensil</h4>
       </div>
