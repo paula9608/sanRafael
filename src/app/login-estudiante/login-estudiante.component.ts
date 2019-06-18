@@ -11,11 +11,14 @@ import { IUsuario } from '../interfaces/usuario.interface';
   styleUrls: ['./login-estudiante.component.css']
 })
 export class LoginEstudianteComponent implements OnInit {
+ keys = Object.keys;
+  usuarios:IUsuario[]=[];
+ username: any = {};
 
- username= {} as string;
+ //username= {} as string;
   password: string;
   usuario:IUsuario;
-  usuarios:IUsuario[];
+ // usuarios:IUsuario[];
   tipo: TipoRolEnum   
   constructor(protected apiService: ApiService, protected router: Router) {
     this.tipo=TipoRolEnum.ROLE_ESTUDIANTE;
