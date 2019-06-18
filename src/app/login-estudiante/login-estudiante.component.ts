@@ -15,45 +15,17 @@ export class LoginEstudianteComponent implements OnInit {
   password: string;
   usuario:IUsuario;
   usuarios:IUsuario[];
-  constructor(protected apiService: ApiService, protected router: Router) { }
-
+  tipo: TipoRolEnum   
+  constructor(protected apiService: ApiService, protected router: Router) {
+    this.tipo=TipoRolEnum.ROLE_ESTUDIANTE;
+   }
+        
   ngOnInit() {
-   /** this.apiService.findAllUsuarios().subscribe(
-      response => this.usuarios = response.body,
-      err => console.log(err)
-    );*/
+    this.apiService.findByRolTipo(this.tipo).subscribe(
+      res=>this.usuarios=res.body,
+      err=>console.log(err)
+    )
   }
 
-  login() {
-    this.apiService.login(this.username, this.password).subscribe(
-      res => {
-       
-       this.usuario= res.body;
-        this.redirectLogin(this.usuario.rol.tipo);
-        console.log(res);
- 
-       },
-      err => {       
-        console.log(err);
-        Swal.fire({
-        type: 'error',
-        title: 'ERROR',
-        text: 'password o username incorrectos!',
-      })
-    }
-    );
-  }
-
-  redirectLogin( rol: TipoRolEnum) {
-    localStorage.setItem('id', this.usuario.id.toString());
-    localStorage.setItem('nombre', this.usuario.nombre + ' ' + this.usuario.apellido);
-    localStorage.setItem('grado', this.usuario.grado);
-    localStorage.setItem('rol', this.usuario.rol.tipo)
-
-    if (rol === TipoRolEnum.ROLE_PROFESOR) {
-      this.router.navigateByUrl('/home');
-    } else {
-      this.router.navigateByUrl('/inicio-estudiante');
-    }
-  }
+  
 }

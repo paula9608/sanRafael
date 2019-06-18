@@ -37,7 +37,7 @@
             
             <h4>¡Selecciona tu nombre de la lista!</h4>
            <select style="margin-top: 35px;width: 430px;margin-left: 0.5px;" class="form-control form-control-lg"  >
-           
+            <option *ngFor="let usuario of usuarios" >{{usuario.nombre}}</option>
           </select>
                <a id="ingreso" style="margin-top: 50px; width: 16rem;" href="/inicio-estudiante" class="btn btn-primary" >Ingresar</a>
              </div>
