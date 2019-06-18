@@ -25,6 +25,7 @@ import { JuegoParejaComponent } from './juegos/juego-pareja.component';
 import { UploadFilesComponent } from './upload-files/upload-files.component';
 import { JugarPreguntasComponent } from './jugar/jugar-preguntas.component';
 import { JugarFracionesComponent } from './jugar-fraciones/jugar-fraciones.component';
+import { LoginEstudianteComponent } from './login-estudiante/login-estudiante.component';
 
 const rutas = [
   { path: 'preguntas/:id', component: PreguntasComponent },
@@ -47,7 +48,8 @@ const rutas = [
   { path: 'vista-taller', component: VistaTallerComponent },
   { path: 'tallerEditar/:id', component: TallerEditarComponent },
   { path: 'jugar/preguntas/:id', component: JugarPreguntasComponent },
-  {path:'jugar-fraciones', component:JugarFracionesComponent}
+  {path:'jugar-fraciones', component:JugarFracionesComponent},
+  {path:'login-estudiante', component:LoginEstudianteComponent}
 ];
 
 
@@ -73,7 +75,8 @@ const rutas = [
     JuegoParejaComponent,
     VistaMinijuegosComponent,
     JugarPreguntasComponent,
-    JugarFracionesComponent
+    JugarFracionesComponent,
+    LoginEstudianteComponent
   ],
   imports: [
     BrowserModule,
