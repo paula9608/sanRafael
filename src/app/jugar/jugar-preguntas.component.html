@@ -38,10 +38,12 @@
     </div>
     <div id="tabla" class="row">
       <div class="col-sm">
+          <h3 style="margin-left: 550px;margin-top: 50px">Responde la siguiente pregunta:</h3>
         <div *ngIf="estado==false" id="lista" class="container">
-          <div class="alert alert-info">
+         
+          <div style="height: 70px;width: 600px;margin-left: 580px; border: 3px solid rgb(12, 12, 12);text-align: center" class="alert alert-info">
               
-            <h4 class="alert-heading mx-auto" style="width: 200px;">{{preguntaActual.nombre}} ?</h4>
+            <h2 class="alert-heading mx-auto" >{{preguntaActual.nombre}} ?</h2>
             <p>{{preguntaActual.descripcion}}</p>
           </div>
         </div>
@@ -53,16 +55,23 @@
     
     </div>
 
-    <div>
-      <ul class="list-group w-75 mx-auto"> 
+    <div class="row">
+      <div class="col-sm">
+        <img style="margin-top: -70px;" src="assets/magia.png" >
+      </div>
+      <div class="col-sm">
+        <ul  class="list-group w-75 mx-auto">
           
         
-        <li class="list-group-item list-group-item-danger p-4 mt-2" (click)="seleccionar(respuestas[arreglo[0]])">{{respuestas[arreglo[0]].nombre}} </li> 
-        <li class="list-group-item list-group-item-success p-4 mt-2" (click)="seleccionar(respuestas[arreglo[1]])">{{respuestas[arreglo[1]].nombre}}</li>
-        <li class="list-group-item list-group-item-warning p-4 mt-2" (click)="seleccionar(respuestas[arreglo[2]])">{{respuestas[arreglo[2]].nombre}}</li>
-        <li class="list-group-item list-group-item-info p-4 mt-2" (click)="seleccionar(respuestas[arreglo[3]])">{{respuestas[arreglo[3]].nombre}}</li>
+        <li style="width: 500px;margin-right: 300px; font-size: 25px"  class="list-group-item list-group-item-danger p-4 mt-2" (click)="seleccionar(respuestas[arreglo[0]])">{{respuestas[arreglo[0]].nombre}} </li> 
+        <li style="width: 500px; font-size: 25px " class="list-group-item list-group-item-success p-4 mt-2" (click)="seleccionar(respuestas[arreglo[1]])">{{respuestas[arreglo[1]].nombre}}</li>
+        <li style="width: 500px; font-size: 25px" class="list-group-item list-group-item-warning p-4 mt-2"  (click)="seleccionar(respuestas[arreglo[2]])">{{respuestas[arreglo[2]].nombre}}</li>
+        <li style="width: 500px;  font-size: 25px" class="list-group-item list-group-item-info p-4 mt-2"  (click)="seleccionar(respuestas[arreglo[3]])">{{respuestas[arreglo[3]].nombre}}</li>
       </ul>
     </div>
   </div>
- 
+</div>
+<div id="pie" class="row">
+    <h4  style="margin-left: 400px; margin-top: 50px " >Institución Educativa rural San Rafael sede el Pensil</h4>
+  </div>
 </div>

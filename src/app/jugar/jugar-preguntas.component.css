@@ -14,6 +14,17 @@
     background-color: #17a2b8;
   
   }
+  div#infoEstudiante{
+    background-image: url('src/assets/Encabezado.png');
+    height: 100px;
+  
+        } 
+  div#pie{
+    text-align: center;
+   background-image: url('src/assets/pie.png');
+    height: 150px;
+    
+    }
   div#nav1-row{
     margin-top: 60px;
     }
