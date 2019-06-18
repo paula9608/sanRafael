@@ -14,7 +14,7 @@ export class LoginEstudianteComponent implements OnInit {
  keys = Object.keys;
 
  username: any = {};
- lista:string[];
+ lista=[];
   password: string;
   usuario:IUsuario;
  usuarios:IUsuario[];
