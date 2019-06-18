@@ -55,7 +55,7 @@ export class JugarPreguntasComponent implements OnInit {
   cargarRespuestas() {
     this.preguntaActual = this.preguntas[this.indexActual];
     this.estado = false;
-    this.arreglo=this.sortearRespuestas();
+    this.sortearRespuestas();
     this.cargarImagen();
     
     this.apiService.findRespuestasByPreguntaId(this.preguntas[this.indexActual].id).subscribe(
@@ -172,8 +172,8 @@ var parametro='';
     audio.play();
 
   }
-  sortearRespuestas():number[]{
-   var numeros =[];
+  sortearRespuestas(){
+  
     var limite=4;
     var posicion=0;
     var lastNumber = 0;
@@ -181,12 +181,10 @@ var parametro='';
         if(RandomNumber != lastNumber){
             var random = RandomNumber;
             lastNumber = RandomNumber;
-            numeros.push(random);
+           this.arreglo.push(random);
              posicion++;
-        }
-        if(posicion==4){
-    return numeros;
-      } if(RandomNumber == lastNumber){
+        
+      } else{
         this.sortearRespuestas();
     }
   }
