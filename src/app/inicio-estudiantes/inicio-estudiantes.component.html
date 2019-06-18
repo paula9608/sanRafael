@@ -1,58 +1,83 @@
+
 <div id="inicioEstu" class="div-principalIni">
   <div  id="nav" class="container-nav">
-      <div id="nav-row" class="row">          
-            <nav  id="nav-otra" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-               </button>
-             
-               <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                 <div id="titulo" class="col-sm">
-                    <h1 style="color:#FFFFFF">Colegio San Rafael sede el Pensil</h1> 
-                 </div>
-                 
+    <div id="nav-row" class="row">          
+          <nav  id="nav-otra" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+           
+             <div id="barra" class="collapse navbar-collapse" id="navbarsExampleDefault">
+               <div id="titulo" class="col-sm">
+                  <h1 style="color:#FFFFFF">Colegio San Rafael sede el Pensil</h1> 
                </div>
-             </nav>
-      </div>
-      <div id="infoEstudiante" class="row">
-         <div  class="col-sm">
-           <h2 icon="assets/perfil.png" style="color:#FFFFFF">nombre</h2>
-         </div>
-         
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <img id="flecha" src="assets/flecha.gif" >
+               <div class="col-sm">
+                  <div id="cerrar" class="text-right">
+                      <a [routerLink]="['/login']" class="text-info">Cerrar sesión</a>
+                  </div>                   </div>
+             </div>
+           </nav>
+    </div>
+    <div id="infoEstudiante" class="row">
+       <div  class="col-sm">
+         <h2 icon="assets/perfil.png" style="color:rgb(0, 0, 0)">{{nombre}}</h2>
+       </div>
+       <div  class="col col-lg-2">
+         <h2 style="color:rgb(0, 0, 0)"id="nombre">Grado</h2>
+       </div>
+    </div>
+  </div>
+  
+  <div class="container-target">
+      <div id="target-row" class="row justify-content-center align-items-center">
+        <div id="target-col-uno"  class="col-sm  align-items-center">
+      <div id="uno" class="card">
+        <img id="actividad"   src="assets/actividad.png" class="card-img-top" >
+        <div id="card-uno"  class="card-body" >
+             <h5  class="card-title" >Actividades</h5>
+             <p  class="card-text">Aquí encontrarás las actividades propuestas por tu profesor</p>
+             <a href="/vistaActividad"style="width: 16rem"  class="btn btn-primary" >Ver actividades</a>
+           </div>
         </div>
-          </div>
-      
+      </div>
+      <div id="target-col-dos" class="col-sm justify-content-center align-items-center">
+          <div class="card">
+              <img id="documento" src="assets/documentos.jpg" class="card-img-top" >
+              <div id="card-dos" class="card-body">
+                   <h5 class="card-title">Documentos</h5>
+                   <p class="card-text">Aquí encontrarás documentos bases para el desarrollo de las actividades</p>
+                   <a href="/vistaDocumentos" style="width: 16rem"  class="btn btn-primary">Ver Documentos</a>
+                 </div>
+              </div>
+      </div>
+      <div id="target-col-tres" class="col-sm justify-content-center align-items-center">
+          <div class="card">
+              <img id="cosas" src="assets/cosasInte.png" class="card-img-top" >
+              <div class="card-body">
+                   <h5 class="card-title">Cosas de interes</h5>
+                   <p class="card-text">Aquí encontrarás material de todo tipo adicional</p>
+                   <a href="/vistaCosasInte" style="width: 16rem"  class="btn btn-primary">Ver material</a>
+                 </div>
+              </div>
+      </div>
+      <div id="target-col-tres" class="col-sm justify-content-center align-items-center">
+        <div class="card">
+            <img id="jugar" src="assets/control.png" class="card-img-top" >
+            <div class="card-body">
+                 <h5 class="card-title">Minijuegos</h5>
+                 <p class="card-text">Aquí encontrarás minijuegos donde podrás aprender mucho más </p>
+                 <a href="/vistaJuegos" style="width: 16rem" class="btn btn-primary">Ver juegos</a>
+               </div>
+            </div>
+    </div>
+      </div>
+    </div>
+    <div id="pie" class="row">
+      <h4  style="margin-left: 400px; margin-top: 50px " >Institución Educativa rural San Rafael sede el Pensil</h4>
     </div>
 
-    <div class="container-target">
-        <div id="target-row" class="row justify-content-center align-items-center">
-            <img style="margin-left: 50px" src="assets/Escribir.gif" >
-          <div id="target-col-uno" class="col-sm ">
-        <div class="card"style="width:  450px"  >
-          <div id="card-uno" style="width:  430px" class="card-body" >
-            
-            <h4>¡Selecciona tu nombre de la lista!</h4>
-           <select style="margin-top: 35px;width: 430px;margin-left: 0.5px;" class="form-control form-control-lg"  >
-           
-          </select>
-               <a id="ingreso" style="margin-top: 50px; width: 16rem;" href="/inicio-estudiante" class="btn btn-primary" >Ingresar</a>
-             </div>
-          </div>
-        </div>
-        <img style="margin-right: 50px" src="assets/Ver.gif" >      
-        
-        </div>
-      </div>
-      <h2>aa</h2>
-      <div id="pie" class="row">
-        <h4  style="margin-left: 400px; margin-top: 50px " >Institución Educativa rural San Rafael sede el Pensil</h4>
-      </div>
+    <audio id="audioID">
+       <source src="assets/bad.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
 </div>
-
-
-
-
