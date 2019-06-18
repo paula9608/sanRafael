@@ -5,31 +5,44 @@
 .divClaseActividad {
     margin: 0;
     padding: 0;
-    background-image: url('src/assets/fondo.png');
-    background-color: #17a2b8;
-  
+    background-image: url('src/assets/fondo4.png');
+    background-color: #ffffff;
+    height: 1000px;  
   }
   div#nav1-row{
     margin-top: 60px;
     }
-    div#infoestudiante{
-      margin-left: 400px;
-      
-    }
+
+    div#infoEstudiante{
+      background-image: url('src/assets/Encabezado.png');
+      height: 100px;
+
+          }  
     actividad.container #tabla#tablaItems {
       margin-top: 120px;
-      max-width: 600px;
+      max-width: 400px;
       height: 320px;
       border: 3px solid rgb(12, 12, 12);
       background-color: #EAEAEA;
+      padding: 30px;
     }  
     div#lista{
-      background: rgb(200, 228, 241);
+      
+      
       border: 3px solid rgb(12, 12, 12);
-      margin-left: 90px;
+      margin-left: 250px;
+      margin-right: 200px;
       margin-top: 50px;
+      padding-top: 20px;
+      background-color:bisque;
       
     }  
     .columna0{
       margin-right: 10px;
+    }
+    div#pie{
+    text-align: center;
+   background-image: url('src/assets/pie.png');
+    height: 150px;
+    
     }

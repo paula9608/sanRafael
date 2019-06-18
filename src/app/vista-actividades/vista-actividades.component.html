@@ -8,7 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="barra">
           <div id="titulo" class="col-sm">
-            <h1 style="color:#FFFFFF">Colegio San Rafael</h1>
+            <h1 style="color:#FFFFFF">Colegio San Rafael sede el Pensil</h1>
           </div>
           <div class="col col-lg-2">
               <div class="row">
@@ -29,23 +29,25 @@
 
     <div id="infoEstudiante" class="row">
       <div class="col-sm">
-        <h2 style="color:#FFFFFF">{{nombre}}</h2>
+        <h2 style="color:rgb(0, 0, 0)">{{nombre}}</h2>
       </div>
       <div class="col col-lg-2">
-        <h2 style="color:#FFFFFF" id="nombre">Grado</h2>
+        <h2 style="color:rgb(0, 0, 0)" id="nombre">{{grado}}</h2>
       </div>
     </div>
-    <div id="tabla" class="row">
+    <div id="tabla" style="width: 800px" class="row">
       <div class="col-sm">
-        <div id="lista" class="container">
+        <div id="lista"  class="container">
           <ul class="list-unstyled">
             <a *ngFor="let taller of talleres" routerLink="/jugar/preguntas/{{taller.id}}" routerLinkActive="router-link-active" >
               <li class="media">
-                <img src="assets/flecha.png" class="mr-3" >
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">{{taller.titulo}}</h5>
-                    {{taller.descripcion}}
-                </div>
+                <img style="width: 100px;height: 100px;" src="assets/lapiz-escuela.gif" class="mr-3" >
+                <div  class="media-body">
+                  <h3 style="color: black" class="mt-0 mb-1">{{taller.titulo}}</h3>
+                   <h5 style="color: black">{{taller.descripcion}}
+                    </h5> 
+                    _______________________________________________________________________________________   
+                               </div>
               </li>
             </a>
             </ul>
@@ -53,5 +55,3 @@
     </div>
   </div>
   </div>
-
-</div>
