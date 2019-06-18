@@ -1,0 +1,45 @@
+*{
+  margin: 0px;
+  padding: 3px;  
+}
+
+div#nav-row{
+  margin-top: 60px;
+  }
+
+div#target-row{
+align-content: center;
+  
+}
+
+
+div#target-col-dos{
+  border-color: black;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+div#target-col-uno{
+
+  text-align: center;
+  border-color: black;
+  margin-top: 50px;
+  
+}
+
+.div-principalIni {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  height: 100vh;
+}
+div#pie{
+  text-align: center;
+background-image: url('src/assets/pie.png');
+height: 150px;
+}
+div#encabezado{
+  background-image: url('src/assets/Encabezado.png');
+  height: 100px;
+  }

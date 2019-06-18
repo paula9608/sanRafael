@@ -26,6 +26,7 @@ import { UploadFilesComponent } from './upload-files/upload-files.component';
 import { JugarPreguntasComponent } from './jugar/jugar-preguntas.component';
 import { JugarFracionesComponent } from './jugar-fraciones/jugar-fraciones.component';
 import { LoginEstudianteComponent } from './login-estudiante/login-estudiante.component';
+import { InicioLoginComponent } from './inicio-login/inicio-login.component';
 
 const rutas = [
   { path: 'preguntas/:id', component: PreguntasComponent },
@@ -49,7 +50,8 @@ const rutas = [
   { path: 'tallerEditar/:id', component: TallerEditarComponent },
   { path: 'jugar/preguntas/:id', component: JugarPreguntasComponent },
   {path:'jugar-fraciones', component:JugarFracionesComponent},
-  {path:'login-estudiante', component:LoginEstudianteComponent}
+  {path:'login-estudiante', component:LoginEstudianteComponent},
+  {path:'inicio-login',component:InicioLoginComponent}
 ];
 
 
@@ -76,7 +78,8 @@ const rutas = [
     VistaMinijuegosComponent,
     JugarPreguntasComponent,
     JugarFracionesComponent,
-    LoginEstudianteComponent
+    LoginEstudianteComponent,
+    InicioLoginComponent
   ],
   imports: [
     BrowserModule,
