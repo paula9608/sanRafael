@@ -26,7 +26,7 @@ export class JugarPreguntasComponent implements OnInit {
   audios:String[];
   estado: boolean;
   tipos=TipoEnum;
-  arreglo:number[]=[];
+  arreglo:string[]=[];
   constructor(private apiService: ApiService, private actRoute: ActivatedRoute, private router: Router) {
     this.id = this.actRoute.snapshot.paramMap.get('id');
     
@@ -173,20 +173,11 @@ var parametro='';
 
   }
   sortearRespuestas(){
-  
-    var limite=4;
-    var posicion=0;
-    var lastNumber = 0;
-       var RandomNumber = Math.floor(Math.random() * 4);  
-        if(RandomNumber != lastNumber){
-            var random = RandomNumber;
-            lastNumber = RandomNumber;
-           this.arreglo.push(random);
-             posicion++;
-        
-      } else{
-        this.sortearRespuestas();
-    }
+    var myArray = ['0','1','2','3'];
+    myArray=myArray.sort(function() {return Math.random()-0.5});
+    myArray.forEach(element => {
+      this.arreglo.push(element);
+    });
   }
   
 }
