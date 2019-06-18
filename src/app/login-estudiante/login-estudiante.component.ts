@@ -12,13 +12,12 @@ import { IUsuario } from '../interfaces/usuario.interface';
 })
 export class LoginEstudianteComponent implements OnInit {
  keys = Object.keys;
-  usuarios:IUsuario[]=[];
- username: any = {};
 
- //username= {} as string;
+ username: any = {};
+ lista:string[];
   password: string;
   usuario:IUsuario;
- // usuarios:IUsuario[];
+ usuarios:IUsuario[];
   tipo: TipoRolEnum   
   constructor(protected apiService: ApiService, protected router: Router) {
     this.tipo=TipoRolEnum.ROLE_ESTUDIANTE;
@@ -26,7 +25,11 @@ export class LoginEstudianteComponent implements OnInit {
         
   ngOnInit() {
     this.apiService.findByRolTipo(this.tipo).subscribe(
-      res=>this.usuarios=res.body,
+      res=>{this.usuarios=res.body;
+        this.usuarios.forEach(element => {
+          this.lista.push(element.nombre);
+        });  },
+
       err=>console.log(err)
     )
   }
