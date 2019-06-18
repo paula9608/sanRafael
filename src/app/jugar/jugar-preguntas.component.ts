@@ -183,12 +183,12 @@ var parametro='';
             lastNumber = RandomNumber;
             numeros.push(random);
              posicion++;
-        }else{
-            this.sortearRespuestas();
         }
         if(posicion==4){
     return numeros;
-      }
+      } if(RandomNumber == lastNumber){
+        this.sortearRespuestas();
+    }
   }
   
 }
