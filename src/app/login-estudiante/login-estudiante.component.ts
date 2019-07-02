@@ -39,6 +39,7 @@ export class LoginEstudianteComponent implements OnInit {
         this.password=element.password;
       }
     });
+    console.log('JUAN' + this.username + ' 7 ' + this.password);
     this.apiService.login(this.username, this.password).subscribe(
       res => {
        
