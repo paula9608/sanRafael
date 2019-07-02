@@ -13,7 +13,7 @@ import { IUsuario } from '../interfaces/usuario.interface';
 export class LoginEstudianteComponent implements OnInit {
  keys = Object.keys;
 
- username: any = {};
+ username: any = null;
  lista=[];
   password: string;
   usuario:IUsuario;
@@ -39,7 +39,6 @@ export class LoginEstudianteComponent implements OnInit {
         this.password=element.password;
       }
     });
-    console.log('JUAN' + this.username + ' 7 ' + this.password);
     this.apiService.login(this.username, this.password).subscribe(
       res => {
        
