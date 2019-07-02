@@ -36,9 +36,9 @@
           <div id="card-uno" style="width:  430px" class="card-body" >
             
             <h4>¡Selecciona tu nombre de la lista!</h4>
-           <select style="margin-top: 35px;width: 430px;margin-left: 0.5px;" class="form-control form-control-lg"  >
+           <select style="margin-top: 35px;width: 430px;margin-left: 0.5px;" class="form-control form-control-lg"  [(ngModel)]="username">
             <option value="">Elige opcion</option>
-            <option *ngFor="let estudiante of usuarios">{{estudiante.nombre}}</option>
+            <option *ngFor="let estudiante of usuarios" value="estudiante.nombre">{{estudiante.nombre}}</option>
           </select>
                <button id="ingreso" style="margin-top: 50px; width: 16rem;" class="btn btn-primary" (click)="login()">Ingresar</button>
              </div>
