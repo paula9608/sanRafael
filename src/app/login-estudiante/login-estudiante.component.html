@@ -40,7 +40,7 @@
             <option value="">Elige opcion</option>
             <option *ngFor="let estudiante of usuarios">{{estudiante.nombre}}</option>
           </select>
-               <a id="ingreso" style="margin-top: 50px; width: 16rem;" href="/inicio-estudiante" class="btn btn-primary" >Ingresar</a>
+               <button id="ingreso" style="margin-top: 50px; width: 16rem;" class="btn btn-primary" (click)="login()">Ingresar</a>
              </div>
           </div>
         </div>
