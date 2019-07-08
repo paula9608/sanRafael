@@ -24,7 +24,7 @@
                             <input #confimPassword="ngModel" type="password" name="confirmPassword" id="confirmPassword" class="form-control" [(ngModel)]="confirmPassword" required>
                         </div>
                         <div class="form-group">
-                            <label for="acepto" class="text-info"><span>Acepto terminos</span> <span><input id="acepto" name="acepto" type="checkbox"></span></label><br>
+                            
                             <input [disabled]="!form.form.valid" type="submit" name="submit" class="btn btn-info btn-md" value="Registrar" (click)="registrarUsuario()">
                         </div>
     
