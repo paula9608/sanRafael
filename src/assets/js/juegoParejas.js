@@ -1,5 +1,3 @@
-import { forEachToken } from "tslint";
-
 var cartas = new Array( 
     {nombre: '1', seleccion: false}, {nombre: '2', seleccion: false}, 
     {nombre: '3', seleccion: false}, {nombre: '4', seleccion: false}, 
@@ -102,14 +100,7 @@ function comprobar() {
        document.getElementById("botones").innerHTML = ""; 
     }
 }
-function validarNombre(string){
-    var out='';
-    var filtro='abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-for(var i=0;i<string.length;i++)
-if(filtro.indexOf(string.charAt(i))!=-1)
-out+=string.charAt(i);
-return out;
-}
+
 function resetearJuego() {
     cartas.sort(function () { return Math.random() - 0.5 });
     for (var i = 0; i < 16; i++) {
@@ -119,3 +110,11 @@ function resetearJuego() {
         colorCambio(i, 'black', '?');
     }
 };
+function validarNombre(string){
+    var out='';
+    var filtro='abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+for(var i=0;i<string.length;i++)
+if(filtro.indexOf(string.charAt(i))!=-1)
+out+=string.charAt(i);
+return out;
+}
