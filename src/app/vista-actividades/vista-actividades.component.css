@@ -7,7 +7,7 @@
     padding: 0;
 
     background-color: #ffffff;
-    height: 1000px;  
+    
   }
   div#nav1-row{
     margin-top: 60px;
@@ -41,6 +41,7 @@
       margin-right: 10px;
     }
     div#pie{
+      margin-top: 20%;
     text-align: center;
    background-image: url('src/assets/pie.png');
     height: 150px;
