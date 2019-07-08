@@ -42,5 +42,14 @@ export class RegistroComponent implements OnInit {
    }
    return true;
   }
+validarNombre(string){ //solo letras
+var out="";
+var filtro='abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+for (var i = 0; i < string.length; i++) 
+  if(filtro.indexOf(string.charAt(i))!=-1)
+  out+=string.chartAt(i);
+  return out;
 
+
+}
 }
