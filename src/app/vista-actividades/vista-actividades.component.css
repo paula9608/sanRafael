@@ -41,6 +41,7 @@
       margin-right: 10px;
     }
     div#pie{
+      margin-top: 20%;
     text-align: center;
    background-image: url('src/assets/pie.png');
     height: 150px;
