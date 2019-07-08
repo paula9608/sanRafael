@@ -45,17 +45,9 @@ export class RegistroComponent implements OnInit {
 validarNombre(string){ //solo letras
 var out="";
 var filtro='abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-for (var i = 0; i < string.length; i++) {
-  if(filtro.indexOf(string.charAt(i))!=-1){
+for (var i = 0; i < string.length; i++) 
+  if(filtro.indexOf(string.charAt(i))!=-1)
   out+=string.chartAt(i);
-   return out;
-}
-}
-Swal.fire({
-  type: 'error',
-  title: 'ERROR',
-  text: 'El campo nombre no acepta valores numericos!',
-})
-return "";
+return out;
 }
 }
