@@ -27,6 +27,7 @@ import { JugarPreguntasComponent } from './jugar/jugar-preguntas.component';
 import { JugarFracionesComponent } from './jugar-fraciones/jugar-fraciones.component';
 import { LoginEstudianteComponent } from './login-estudiante/login-estudiante.component';
 import { InicioLoginComponent } from './inicio-login/inicio-login.component';
+import { CanActivateViaAuthGuardComponent } from './can-activate-via-auth-guard/can-activate-via-auth-guard.component';
 
 const rutas = [
   { path: 'preguntas/:id', component: PreguntasComponent },
@@ -35,7 +36,7 @@ const rutas = [
   { path: 'actividad-profesor/:id', component: ActividadProfesorComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'admin', component: AdminComponent },
+  { path: 'admin', component: AdminComponent ,CanActivate:CanActivateViaAuthGuardComponent},
   { path: 'formulario', component: FormularioComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'inicio-estudiante', component: InicioEstudiantesComponent },
@@ -51,7 +52,8 @@ const rutas = [
   { path: 'jugar/preguntas/:id', component: JugarPreguntasComponent },
   {path:'jugar-fraciones', component:JugarFracionesComponent},
   {path:'login-estudiante', component:LoginEstudianteComponent},
-  {path:'',component:InicioLoginComponent}
+  {path:'',component:InicioLoginComponent},
+  {path:'can-activate',component:CanActivateViaAuthGuardComponent}
 ];
 
 
@@ -79,7 +81,8 @@ const rutas = [
     JugarPreguntasComponent,
     JugarFracionesComponent,
     LoginEstudianteComponent,
-    InicioLoginComponent
+    InicioLoginComponent,
+    CanActivateViaAuthGuardComponent,
   ],
   imports: [
     BrowserModule,
