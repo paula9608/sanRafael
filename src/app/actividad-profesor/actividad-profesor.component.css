@@ -9,7 +9,7 @@
     padding: 0;
     background-image: url('src/assets/fondo.png');
     background-color: #17a2b8;
-    height: 100vh;
+    max-height: max-content
 }
 .container-fondo{
     font-style: bold;
