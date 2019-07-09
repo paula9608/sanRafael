@@ -14,12 +14,23 @@ export class RegistroComponent implements OnInit {
 
   usuario = {} as IUsuario;
   confirmPassword: string;
-
+  usuarios:IUsuario[];
+  lista=[];
+  tipo: TipoRolEnum;
   constructor(private apiService: ApiService, private router: Router) { 
+    this.tipo=TipoRolEnum.ROLE_PROFESOR;
   }
   
 
   ngOnInit() {
+    this.apiService.findByRolTipo(this.tipo).subscribe(
+      res=>{this.usuarios=res.body;
+        this.usuarios.forEach(element => {
+          this.lista.push(element.username);
+        });  },
+
+      err=>console.log(err)
+    )
   }
 
   registrarUsuario() {
@@ -42,6 +53,18 @@ export class RegistroComponent implements OnInit {
    }
    return true;
   }
+validarRegistro():boolean{
+this.lista.forEach(element => {
+  if(this.usuario.username!=element)  {
+    Swal.fire({
+      type: 'error',
+      title: 'ERROR',
+      text: 'El username ya existe!',
+    })
 
+    return false;
+  }
+});
+return true;
 }
-
+}
