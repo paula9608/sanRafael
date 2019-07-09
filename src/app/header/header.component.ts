@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   }
 cerrar(){
   localStorage.clear();
-  this.router.navigateByUrl('/login-estudiante');
+  this.router.navigateByUrl('/');
   
 }
 }
