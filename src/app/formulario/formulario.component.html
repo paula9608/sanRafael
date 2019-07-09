@@ -12,12 +12,12 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputName">Nombre</label>
-                      <input #nombre="ngModel" type="text" name="nombre" id="nombre" placeholder="Nombre"class="form-control" [(ngModel)]="usuario.nombre" required>
+                      <input #nombre="ngModel"  name="nombre"   onkeyup="this.value=validarNombre(this.value)"placeholder="Nombre"class="form-control" [(ngModel)]="usuario.nombre" required>
                       
                     </div>
                     <div class="form-group col-md-6">
                     <label for="inputLastname">Apellido</label>
-                    <input #apellido="ngModel" type="text" name="apellido" id="apellido" placeholder="apellido"class="form-control" [(ngModel)]="usuario.apellido" required>
+                    <input #apellido="ngModel" type="text" name="nombre"  onkeyup="this.value=validarNombre(this.value)" placeholder="apellido"class="form-control" [(ngModel)]="usuario.apellido" required>
                   </div>
                   </div>
                   <div class="form-group">
