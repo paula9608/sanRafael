@@ -57,6 +57,7 @@ const rutas = [
 
 
 @NgModule({
+ 
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -91,7 +92,7 @@ const rutas = [
     
     FormsModule
   ],
-  providers: [],
+  providers: [CanActivateViaAuthGuardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
