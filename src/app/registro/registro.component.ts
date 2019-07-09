@@ -55,7 +55,7 @@ export class RegistroComponent implements OnInit {
   }
 validarRegistro():boolean{
 this.lista.forEach(element => {
-  if(this.usuario.username!=element)  {
+  if(this.usuario.username==element)  {
     Swal.fire({
       type: 'error',
       title: 'ERROR',
