@@ -54,7 +54,7 @@ export class RegistroComponent implements OnInit {
    return true;
   }
 validarRegistro():boolean{
-  var estado;
+  var estado=true;
 this.lista.forEach(element => {
   if(this.usuario.username==element)  {
     Swal.fire({
@@ -65,7 +65,6 @@ this.lista.forEach(element => {
 
     estado= false;
   }
-  estado=true;
 });
 return estado;
 }
