@@ -36,9 +36,9 @@ const rutas = [
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'admin', component: AdminComponent , canActivate:[CanActivateViaAuthGuardComponent]},
-  { path: 'formulario', component: FormularioComponent },
+  { path: 'formulario', component: FormularioComponent,canActivate:[CanActivateViaAuthGuardComponent] },
   
-  { path: 'inicio-estudiante', component: InicioEstudiantesComponent },
+  { path: 'inicio-estudiante', component: InicioEstudiantesComponent,canActivate:[CanActivateViaAuthGuardComponent]},
   { path: 'vistaActividad', component: VistaActividadesComponent,canActivate:[CanActivateViaAuthGuardComponent] },
   { path: 'login', component: LoginComponent },
   

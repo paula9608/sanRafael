@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IUsuario } from '../interfaces/usuario.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio-estudiantes',
@@ -10,7 +11,7 @@ export class InicioEstudiantesComponent implements OnInit {
 
   nombre: string;
   grado: string;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
     this.nombre =  localStorage.getItem('nombre');
@@ -24,5 +25,9 @@ export class InicioEstudiantesComponent implements OnInit {
     audio.play();
 
   }
-
+cerrar(){
+  localStorage.clear();
+  this.router.navigateByUrl('/login-estudiante');
+  
+}
 }
