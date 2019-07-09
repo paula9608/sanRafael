@@ -36,13 +36,13 @@ const rutas = [
   { path: 'actividad-profesor/:id', component: ActividadProfesorComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'admin', component: AdminComponent ,CanActivate:CanActivateViaAuthGuardComponent},
+  { path: 'admin', component: AdminComponent ,CanActivate:[CanActivateViaAuthGuardComponent]},
   { path: 'formulario', component: FormularioComponent },
-  { path: 'admin', component: AdminComponent },
+  
   { path: 'inicio-estudiante', component: InicioEstudiantesComponent },
   { path: 'vistaActividad', component: VistaActividadesComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent },
+  
   { path: 'vistaDocumentos', component: VistaDocumentosComponent },
   { path: 'vistaCosasInte', component: VistaCosaInteresComponent },
   { path: 'vistaJuegos', component: VistaMinijuegosComponent },
