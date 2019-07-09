@@ -15,7 +15,9 @@
 .relleno{
     padding: 0%;
     margin:0%;
-    background-color: dimgray
+    background-color: dimgray;
+    background-image: url('src/assets/Encabezado.png');
+    height: 100px;
     
 }
 .titulo{
