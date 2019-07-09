@@ -10,6 +10,7 @@ export class InicioLoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    localStorage.clear();
   }
 
 }
