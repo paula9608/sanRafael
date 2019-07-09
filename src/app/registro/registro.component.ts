@@ -34,7 +34,7 @@ export class RegistroComponent implements OnInit {
   }
 
   registrarUsuario() {
-    if(this.validarContrasena()) {
+    if(this.validarContrasena() && this.validarRegistro()) {
       this.apiService.registrarusuario(this.usuario, TipoRolEnum.ROLE_PROFESOR).subscribe(
         res => this.router.navigateByUrl('/login'),
         err => console.log(err))
