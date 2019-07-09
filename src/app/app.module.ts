@@ -36,7 +36,7 @@ const rutas = [
   { path: 'actividad-profesor/:id', component: ActividadProfesorComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'admin', component: AdminComponent ,CanActivate:[CanActivateViaAuthGuardComponent]},
+  { path: 'admin', component: AdminComponent , canActivate:[CanActivateViaAuthGuardComponent]},
   { path: 'formulario', component: FormularioComponent },
   
   { path: 'inicio-estudiante', component: InicioEstudiantesComponent },
