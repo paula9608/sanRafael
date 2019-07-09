@@ -15,7 +15,8 @@
 .relleno{
     padding: 0%;
     margin:0%;
-    background-image:url('src/assets/alfombraazul.gif');
+    background-color: dimgray
+    
 }
 .titulo{
   
