@@ -13,7 +13,7 @@
                         </div>
                         <div class="form-group">
                             <label for="username" class="text-info">Username:</label><br>
-                            <input #username="ngModel" type="text" name="username" id="username" class="form-control" [(ngModel)]="usuario.username" required>
+                            <input #username="ngModel" name="username"  onkeyup="this.value=NumText(this.value)" class="form-control" [(ngModel)]="usuario.username" required>
                         </div>
                         <div class="form-group">
                             <label for="password" class="text-info">Contraseña:</label><br>

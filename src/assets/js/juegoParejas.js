@@ -118,3 +118,11 @@ if(filtro.indexOf(string.charAt(i))!=-1)
 out+=string.charAt(i);
 return out;
 }
+function NumText(string){
+    var out='';
+    var filtro='abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789';
+for(var i=0;i<string.length;i++)
+if(filtro.indexOf(string.charAt(i))!=-1)
+out+=string.charAt(i);
+return out;
+}
