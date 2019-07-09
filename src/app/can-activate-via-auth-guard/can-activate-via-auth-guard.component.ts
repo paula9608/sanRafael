@@ -1,11 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 
-@Component({
-  selector: 'app-can-activate-via-auth-guard',
-  templateUrl: './can-activate-via-auth-guard.component.html',
-  styleUrls: ['./can-activate-via-auth-guard.component.css']
-})
+@Injectable()
+  
 
 export class CanActivateViaAuthGuardComponent implements CanActivate {
   constructor(private router:Router){}
