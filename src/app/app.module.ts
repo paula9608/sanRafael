@@ -36,7 +36,7 @@ const rutas = [
   { path: 'actividad-profesor/:id', component: ActividadProfesorComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'admin', component: AdminComponent ,CanActivate: CanActivateViaAuthGuardComponent},
+  { path: 'admin', component: AdminComponent ,CanActivate:[CanActivateViaAuthGuardComponent]},
   { path: 'formulario', component: FormularioComponent },
   
   { path: 'inicio-estudiante', component: InicioEstudiantesComponent },
@@ -52,8 +52,8 @@ const rutas = [
   { path: 'jugar/preguntas/:id', component: JugarPreguntasComponent },
   {path:'jugar-fraciones', component:JugarFracionesComponent},
   {path:'login-estudiante', component:LoginEstudianteComponent},
-  {path:'',component:InicioLoginComponent},
-  {path:'can-activate',component:CanActivateViaAuthGuardComponent}
+  {path:'',component:InicioLoginComponent}
+ 
 ];
 
 
@@ -82,7 +82,7 @@ const rutas = [
     JugarFracionesComponent,
     LoginEstudianteComponent,
     InicioLoginComponent,
-    CanActivateViaAuthGuardComponent,
+  
   ],
   imports: [
     BrowserModule,
