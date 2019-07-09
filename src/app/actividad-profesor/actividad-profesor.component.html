@@ -15,6 +15,13 @@
   <div class="list-group alinear-contenedor">
     <a class="list-group-item list-group-item-action active cabecera-fondo bg-info  text-white" *ngIf="idMateria== 1">
       Talleres Y Preguntas De Matematicas
+      <div>
+          <button (click)="clean()" type="button"
+            class="espaciado btn btn-outline-secondary bg-success text-white alinear-boton" data-toggle="modal"
+            data-target="#bookmarkModal">
+            <span> <img src="assets/sum.png"> Nuevo</span>
+          </button>
+        </div>
     </a>
     <a class="list-group-item list-group-item-action active cabecera-fondo bg-info  text-white" *ngIf="idMateria== 2">
       Talleres Y Preguntas De Lectura
