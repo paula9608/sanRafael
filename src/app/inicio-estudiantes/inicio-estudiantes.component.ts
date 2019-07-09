@@ -28,5 +28,6 @@ export class InicioEstudiantesComponent implements OnInit {
 cerrar(){
   localStorage.clear();
   this.router.navigateByUrl('/login-estudiante');
+  
 }
 }
