@@ -10,7 +10,7 @@ export class CanActivateViaAuthGuardComponent implements CanActivate {
     let variable=localStorage.getItem('id');
 if(variable==null || variable==undefined){
   console.log("no esta logueado");
-  this.router.navigateByUrl('/loguin');
+  this.router.navigateByUrl('/login');
   return false;
 }
   

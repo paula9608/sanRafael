@@ -31,7 +31,7 @@ import { CanActivateViaAuthGuardComponent } from './can-activate-via-auth-guard/
 
 const rutas = [
   { path: 'preguntas/:id', component: PreguntasComponent },
- 
+  { path: 'can', component: CanActivateViaAuthGuardComponent},
   { path: 'home', component: HomeComponent },
   { path: 'actividad-profesor/:id', component: ActividadProfesorComponent },
   { path: 'login', component: LoginComponent },
@@ -82,6 +82,7 @@ const rutas = [
     JugarFracionesComponent,
     LoginEstudianteComponent,
     InicioLoginComponent,
+    CanActivateViaAuthGuardComponent
   
   ],
   imports: [
